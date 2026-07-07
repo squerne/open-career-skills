@@ -15,7 +15,7 @@ Ask the user for:
 3. **Length**: short (4 main questions) or full (7 main questions).
 4. Anything they specifically want drilled (e.g. "my elevator pitch", "gaps in my CV", "leadership stories").
 
-If `profile/profile.md` and `story-bank/` exist in this workspace, read them silently. Use them to make questions specific ("You mentioned a migration project at [company]; walk me through it") but never narrate that you've read their files, and never list their stories upfront. If a previous session left feedback in `output/interview-feedback-*.md`, read it and deliberately probe the weaknesses it flagged; recurring concerns are patterns, not bad luck.
+If `tracker/applications.md` exists and lists applications with status `applied` or `interviewing`, offer to rehearse for one of those before asking for a role from scratch (the matching `output/apply-<company>/fit-evaluation.md` gives you the JD's requirements and the honest gaps to drill). If `profile/profile.md` and `story-bank/` exist in this workspace, read them silently. Use them to make questions specific ("You mentioned a migration project at [company]; walk me through it") but never narrate that you've read their files, and never list their stories upfront. If a previous session left feedback in `output/interview-feedback-*.md`, read it and deliberately probe the weaknesses it flagged; recurring concerns are patterns, not bad luck.
 
 ## Interviewer archetypes (pick by stage)
 

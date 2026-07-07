@@ -22,6 +22,23 @@ Run them locally in Claude Code or Claude Desktop, on your own subscription, wit
 | **linkedin-360brew-planner** | Plans and drafts LinkedIn posts under the 2026 ranking rules | Built on LinkedIn's 360Brew decoder model (the reason hashtags and pods died). Saves over likes, analytical first line, pillar discipline. |
 | **cover-letter-writer** | A 300-400 word letter grounded in your real stories | Two or three deep JD connections instead of six shallow ones; banned-cliche list enforced. |
 | **mock-interviewer** | A pressure-tested rehearsal, one question at a time | Stays in character, interrupts rambling, drills "what did YOU do?", then debriefs against structure / specificity / ownership / quantification. |
+| **job-search** | Finds current postings matching your profile | Zero dependencies; only reports jobs it actually fetched or you pasted. Blocked boards get you ready-made search URLs, never invented listings. |
+| **evidence-miner** | Harvests real achievements from your git history into the story bank | Groundedness rule: no citable artifact (commits, PRs, dates), no proposed achievement. Business impact numbers come from you, never inferred from code. |
+
+## The /apply pipeline
+
+The skills also compose into one end-to-end flow per job:
+
+```
+/find-jobs --> /apply <url> --> fit evaluation [stops: apply or skip?]
+                                   --> tailored CV + cover letter [stops: your answers]
+                                   --> independent reviewer agent (groundedness audit)
+                                   --> output/apply-<company>/ + tracker entry
+tracker --> /mock-interview (rehearse the real gaps) + /upskill (gaps recurring across
+            2+ applications become a learning plan)
+```
+
+The reviewer is a separate subagent that audits every claim in the drafts against your actual profile and stories; anything unsourced gets flagged for removal, not "improved". Full walkthrough: [docs/WORKFLOW.md](docs/WORKFLOW.md). Per-skill contracts: [docs/SKILLS.md](docs/SKILLS.md). Something misbehaving: [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
 
 ## Install
 
@@ -41,11 +58,15 @@ claude
 `/setup` builds your profile from a pasted CV or a guided interview. From there:
 
 ```
+/find-jobs        # real postings matching your profile, fit-triaged
+/apply <url>      # the full pipeline: evaluate, draft, review, track
 /optimize-cv      # paste a JD, get a tailored CV in output/
 /extract-story    # braindump a win, get a STAR story in story-bank/
+/mine-evidence    # harvest achievements from your git history
 /plan-content     # 6 post ideas, or draft one post
 /cover-letter     # tailored letter in output/
 /mock-interview   # one question at a time, debrief at the end
+/upskill          # learning plan from gaps recurring across applications
 ```
 
 Your personal data (`profile/profile.md`, your stories, your calendar, everything in `output/`) is **git-ignored by design**: even if you push your fork publicly, your CV and metrics stay local.
@@ -62,7 +83,7 @@ Works in Claude Code and Claude Desktop (any agent that reads `SKILL.md` skills)
 
 ### Option C: plain chat (ChatGPT, claude.ai, Gemini)
 
-Each skill has a self-contained paste-able version in [`prompts/`](prompts/). Paste it as your first message and follow along. You lose the file-based memory; the prompts tell you what to paste each time.
+The five writing skills have self-contained paste-able versions in [`prompts/`](prompts/). Paste one as your first message and follow along. You lose the file-based memory; the prompts tell you what to paste each time. (`/apply`, `/find-jobs`, `/upskill`, and `/mine-evidence` need file and web tools, so they are Claude Code only.)
 
 ## Why we open-sourced this
 
@@ -98,6 +119,13 @@ Only to the model provider you already use (Anthropic, OpenAI, ...). The workspa
 
 **Can I contribute a skill?**
 Yes. See [CONTRIBUTING.md](CONTRIBUTING.md). The quality bar: no skill may fabricate user facts, ever.
+
+## Acknowledgments / Credits
+
+This repo stands on ideas from two MIT-licensed projects, reimplemented (not copied) for this workspace:
+
+- **[MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search)**: the fork-and-run workspace pattern, and the concepts behind our `/apply` drafter-reviewer pipeline, the application tracker, and `/upskill` gap analysis. If you want LaTeX/PDF CV output or Danish job-board CLIs, use his repo; it does both better than we ever will in Markdown.
+- **[Play-New/apply-new](https://github.com/Play-New/apply-new)**: the principle that career evidence should come from work artifacts and that every prose claim should trace to underlying data. Our `evidence-miner` skill and the reviewer's groundedness audit are descendants of that idea.
 
 ## License
 
