@@ -24,17 +24,17 @@
   </g>
 
   <g font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <text x="640" y="200" text-anchor="middle" font-size="84" font-weight="800" fill="#f8fafc" letter-spacing="-2">Open Career Skills</text>
-    <rect x="530" y="232" width="220" height="7" rx="3.5" fill="url(#accent)"/>
-    <text x="640" y="308" text-anchor="middle" font-size="34" fill="#c7d2fe">Claude skills for the job hunt that refuse</text>
-    <text x="640" y="352" text-anchor="middle" font-size="34" fill="#c7d2fe">to invent facts about you.</text>
+    <text x="640" y="190" text-anchor="middle" font-size="84" font-weight="800" fill="#f8fafc" letter-spacing="-2">Open Career Skills</text>
+    <rect x="530" y="222" width="220" height="7" rx="3.5" fill="url(#accent)"/>
+    <text x="640" y="296" text-anchor="middle" font-size="34" fill="#c7d2fe">Claude skills for the job hunt that refuse</text>
+    <text x="640" y="340" text-anchor="middle" font-size="34" fill="#c7d2fe">to invent facts about you.</text>
 
     <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="26">
-      <rect x="290" y="416" width="700" height="112" rx="14" fill="#0f0e24" stroke="#4338ca" stroke-opacity="0.55"/>
-      <text x="322" y="462" fill="#fbbf24">Q: is "increased sales 50%" exact,</text>
-      <text x="322" y="498" fill="#fbbf24">or rounded? <tspan fill="#34d399">waiting for you.</tspan></text>
+      <rect x="250" y="398" width="780" height="118" rx="14" fill="#0f0e24" stroke="#4338ca" stroke-opacity="0.55"/>
+      <text x="282" y="446" fill="#fbbf24">Reviewer: "over 70%" is not your 73%.</text>
+      <text x="282" y="486" fill="#fbbf24">Restored. <tspan fill="#34d399">no inventing. ever.</tspan></text>
     </g>
 
-    <text x="640" y="592" text-anchor="middle" font-size="24" fill="#818cf8">MIT · Claude Code · five skills · your data stays local</text>
+    <text x="640" y="586" text-anchor="middle" font-size="24" fill="#818cf8">MIT · Claude Code · 7 skills + the /apply pipeline · your data stays local</text>
   </g>
 </svg>
