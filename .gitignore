@@ -1,0 +1,21 @@
+# PRIVACY GUARD: personal career data never gets committed, even on public forks.
+# Templates and docs are tracked; your filled-in copies are not.
+profile/*.md
+!profile/*.template.md
+story-bank/*.md
+!story-bank/README.md
+!story-bank/example-story.md
+content/calendar.md
+
+# Generated assets (CVs, cover letters, interview debriefs); keep the folder, ignore its contents
+output/*
+!output/.gitkeep
+
+# Launch material, not part of the public repo
+.launch/
+
+# Local user documents (create this folder for CV exports etc.)
+documents/
+
+# OS noise
+.DS_Store
