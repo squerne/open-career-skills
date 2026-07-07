@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="Open Career Skills">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171532"/>
+      <stop offset="0.55" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.1" r="0.9">
+      <stop offset="0" stop-color="#818cf8" stop-opacity="0.30"/>
+      <stop offset="0.5" stop-color="#6366f1" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#glow)"/>
+  <g stroke="#818cf8" stroke-opacity="0.06" stroke-width="1">
+    <path d="M160 0V640M320 0V640M480 0V640M640 0V640M800 0V640M960 0V640M1120 0V640"/>
+    <path d="M0 128H1280M0 256H1280M0 384H1280M0 512H1280"/>
+  </g>
+
+  <g font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="640" y="200" text-anchor="middle" font-size="84" font-weight="800" fill="#f8fafc" letter-spacing="-2">Open Career Skills</text>
+    <rect x="530" y="232" width="220" height="7" rx="3.5" fill="url(#accent)"/>
+    <text x="640" y="308" text-anchor="middle" font-size="34" fill="#c7d2fe">Claude skills for the job hunt that refuse</text>
+    <text x="640" y="352" text-anchor="middle" font-size="34" fill="#c7d2fe">to invent facts about you.</text>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="26">
+      <rect x="290" y="416" width="700" height="112" rx="14" fill="#0f0e24" stroke="#4338ca" stroke-opacity="0.55"/>
+      <text x="322" y="462" fill="#fbbf24">Q: is "increased sales 50%" exact,</text>
+      <text x="322" y="498" fill="#fbbf24">or rounded? <tspan fill="#34d399">waiting for you.</tspan></text>
+    </g>
+
+    <text x="640" y="592" text-anchor="middle" font-size="24" fill="#818cf8">MIT · Claude Code · five skills · your data stays local</text>
+  </g>
+</svg>

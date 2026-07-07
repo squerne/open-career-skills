@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-label="Open Career Skills: Claude skills that refuse to invent facts about you">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171532"/>
+      <stop offset="0.55" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.15" r="0.8">
+      <stop offset="0" stop-color="#818cf8" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#6366f1" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="340" rx="14" fill="url(#bg)"/>
+  <rect width="1280" height="340" rx="14" fill="url(#glow)"/>
+
+  <!-- faint grid -->
+  <g stroke="#818cf8" stroke-opacity="0.06" stroke-width="1">
+    <path d="M160 0V340M320 0V340M480 0V340M640 0V340M800 0V340M960 0V340M1120 0V340"/>
+    <path d="M0 85H1280M0 170H1280M0 255H1280"/>
+  </g>
+
+  <!-- terminal vignette, right side -->
+  <g transform="translate(872,64)">
+    <rect width="344" height="212" rx="12" fill="#0f0e24" stroke="#4338ca" stroke-opacity="0.55"/>
+    <circle cx="24" cy="22" r="5" fill="#f87171"/>
+    <circle cx="42" cy="22" r="5" fill="#fbbf24"/>
+    <circle cx="60" cy="22" r="5" fill="#34d399"/>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14.5">
+      <text x="24" y="60" fill="#a5b4fc">&gt; /optimize-cv</text>
+      <text x="24" y="88" fill="#e2e8f0">Gap analysis: 7 of 9 requirements</text>
+      <text x="24" y="112" fill="#e2e8f0">evidenced. 2 honest gaps.</text>
+      <text x="24" y="146" fill="#fbbf24">Q1: is "increased sales 50%"</text>
+      <text x="24" y="168" fill="#fbbf24">exact, or rounded?</text>
+      <text x="24" y="196" fill="#34d399">waiting for you. no inventing.</text>
+    </g>
+  </g>
+
+  <!-- title block -->
+  <g font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="72" y="118" font-size="58" font-weight="800" fill="#f8fafc" letter-spacing="-1">Open Career Skills</text>
+    <rect x="74" y="140" width="150" height="5" rx="2.5" fill="url(#accent)"/>
+    <text x="72" y="188" font-size="25" fill="#c7d2fe">Claude skills for the job hunt that refuse to invent facts about you.</text>
+
+    <!-- skill chips -->
+    <g font-size="15.5" font-weight="600">
+      <rect x="72" y="218" width="140" height="36" rx="18" fill="#312e81" stroke="#6366f1" stroke-opacity="0.6"/>
+      <text x="142" y="241" text-anchor="middle" fill="#e0e7ff">cv-optimizer</text>
+      <rect x="222" y="218" width="152" height="36" rx="18" fill="#312e81" stroke="#6366f1" stroke-opacity="0.6"/>
+      <text x="298" y="241" text-anchor="middle" fill="#e0e7ff">story-extractor</text>
+      <rect x="384" y="218" width="162" height="36" rx="18" fill="#312e81" stroke="#6366f1" stroke-opacity="0.6"/>
+      <text x="465" y="241" text-anchor="middle" fill="#e0e7ff">360brew-planner</text>
+      <rect x="556" y="218" width="132" height="36" rx="18" fill="#312e81" stroke="#6366f1" stroke-opacity="0.6"/>
+      <text x="622" y="241" text-anchor="middle" fill="#e0e7ff">cover-letter</text>
+      <rect x="698" y="218" width="158" height="36" rx="18" fill="#312e81" stroke="#6366f1" stroke-opacity="0.6"/>
+      <text x="777" y="241" text-anchor="middle" fill="#e0e7ff">mock-interviewer</text>
+    </g>
+
+    <text x="72" y="296" font-size="16" fill="#818cf8">MIT licensed · runs locally in Claude Code &amp; Claude Desktop · your data stays in your files</text>
+  </g>
+</svg>

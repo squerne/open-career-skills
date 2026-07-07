@@ -1,3 +1,7 @@
+<picture>
+  <img src="assets/banner.svg" alt="Open Career Skills: Claude skills for the job hunt that refuse to invent facts about you" width="100%">
+</picture>
+
 # Open Career Skills
 
 **The prompt architecture behind [JobMentis](https://jobmentis.com/?ref=oss-prompts), open-sourced as installable Claude skills.**
@@ -26,7 +30,8 @@ Run them locally in Claude Code or Claude Desktop, on your own subscription, wit
 The repo is a ready-to-run Claude Code career workspace with file-based memory: your profile in `profile/`, your STAR stories in `story-bank/`, your content calendar in `content/`.
 
 ```bash
-git clone https://github.com/YOUR_FORK/open-career-skills.git
+# fork on GitHub first (keep your fork private if you plan to push), then:
+git clone https://github.com/squerne/open-career-skills.git
 cd open-career-skills
 claude
 # then, inside Claude Code:
