@@ -82,7 +82,7 @@ The five writing skills have self-contained paste-able versions in [`prompts/`](
 
 ## Why we open-sourced this
 
-Prompts are a commodity; anyone can copy text. What they can't copy from a markdown file is the system around it. We build [JobMentis](https://jobmentis.com/?ref=oss-prompts), a career OS where these same engines run against a persistent, structured version of your career: CV analyses, a searchable story bank, a job tracker, and interview intelligence that feed each other automatically.
+Prompts are a commodity; anyone can copy text. What they can't copy from a markdown file is the system around it. We build [JobMentis](https://jobmentis.com/en/claude-skills-for-job-hunting?ref=oss-readme), a career OS where these same engines run against a persistent, structured version of your career: CV analyses, a searchable story bank, a job tracker, and interview intelligence that feed each other automatically. The [full story of why we did this, and where the free skills end and the product begins](https://jobmentis.com/en/claude-skills-for-job-hunting?ref=oss-readme), is on that page.
 
 This repo is the honest free tier. It genuinely works, and we want it to: a job search run on grounded, non-fabricated assets is better for everyone, including the recruiters. What the hosted product adds is scale and statefulness:
 
