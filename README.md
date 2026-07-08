@@ -29,16 +29,11 @@ Run them locally in Claude Code or Claude Desktop, on your own subscription, wit
 
 The skills also compose into one end-to-end flow per job:
 
-```
-/find-jobs --> /apply <url> --> fit evaluation [stops: apply or skip?]
-                                   --> tailored CV + cover letter [stops: your answers]
-                                   --> independent reviewer agent (groundedness audit)
-                                   --> output/apply-<company>/ + tracker entry
-tracker --> /mock-interview (rehearse the real gaps) + /upskill (gaps recurring across
-            2+ applications become a learning plan)
-```
+<picture>
+  <img src="assets/terminal-apply.svg" alt="An /apply run: fit evaluation with an honest verdict, a hard stop for your call, drafting from your facts only, the reviewer restoring a mutated number, tracker entry" width="100%">
+</picture>
 
-The reviewer is a separate subagent that audits every claim in the drafts against your actual profile and stories; anything unsourced gets flagged for removal, not "improved". Full walkthrough: [docs/WORKFLOW.md](docs/WORKFLOW.md). Per-skill contracts: [docs/SKILLS.md](docs/SKILLS.md). Something misbehaving: [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
+The reviewer is a separate subagent that audits every claim in the drafts against your actual profile and stories; anything unsourced gets flagged for removal, not "improved". After the pipeline, `/mock-interview` rehearses the evaluation's real gaps and `/upskill` turns gaps recurring across 2+ applications into a learning plan. Full walkthrough: [docs/WORKFLOW.md](docs/WORKFLOW.md). Per-skill contracts: [docs/SKILLS.md](docs/SKILLS.md). Something misbehaving: [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
 
 ## Install
 

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="600" viewBox="0 0 1280 600" role="img" aria-label="An /apply run: fit evaluation, the reviewer restoring a mutated number, tracker entry">
+  <defs>
+    <linearGradient id="tbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171532"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="600" rx="20" fill="url(#tbg)"/>
+
+  <!-- terminal window -->
+  <rect x="60" y="44" width="1160" height="512" rx="18" fill="#0f0e24" stroke="#4338ca" stroke-opacity="0.55" stroke-width="2"/>
+  <circle cx="104" cy="86" r="9" fill="#f87171"/>
+  <circle cx="136" cy="86" r="9" fill="#fbbf24"/>
+  <circle cx="168" cy="86" r="9" fill="#34d399"/>
+  <text x="640" y="93" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" fill="#4c4a78">claude · open-career-skills</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="30">
+    <text x="104" y="160" fill="#a5b4fc">&gt; /apply https://…/senior-ops-manager</text>
+
+    <text x="104" y="222" fill="#e2e8f0">Fit evaluation: <tspan fill="#60a5fa" font-weight="700">65, Good Fit.</tspan> 2 honest gaps named.</text>
+    <text x="104" y="266" fill="#64748b">[waits for your call: apply, or skip guilt-free]</text>
+
+    <text x="104" y="330" fill="#e2e8f0">Drafting CV + letter from <tspan fill="#a5b4fc">your</tspan> facts only…</text>
+
+    <text x="104" y="394" fill="#fbbf24">Reviewer: "over 70%" is not your 73%.</text>
+    <text x="104" y="438" fill="#fbbf24">Unsourced claim removed. Figure restored.</text>
+
+    <text x="104" y="502" fill="#e2e8f0">Saved to output/ · tracked in your pipeline. <tspan fill="#34d399" font-weight="700">no inventing. ever.</tspan></text>
+  </g>
+</svg>
