@@ -4,7 +4,7 @@
 
 # Open Career Skills
 
-**The prompt architecture behind [JobMentis](https://jobmentis.com/?ref=oss-prompts), open-sourced as installable Claude skills.**
+**The prompt architecture behind [JobMentis](https://jobmentis.com/en/claude-skills-for-job-hunting?ref=oss-readme), open-sourced as installable Claude skills.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -13,7 +13,7 @@ Generic AI career advice gets people rejected: polished emptiness, invented metr
 
 Run them locally in Claude Code or Claude Desktop, on your own subscription, with your data on your machine.
 
-## The five skills
+## The seven skills
 
 | Skill | What it does | The rule that makes it different |
 |---|---|---|
@@ -37,7 +37,7 @@ The reviewer is a separate subagent that audits every claim in the drafts agains
 
 ## Install
 
-### Option A: fork this workspace (recommended)
+### Option A: use this workspace (recommended)
 
 The repo is a ready-to-run Claude Code career workspace with file-based memory: your profile in `profile/`, your STAR stories in `story-bank/`, your content calendar in `content/`.
 
@@ -90,13 +90,14 @@ This repo is the honest free tier. It genuinely works, and we want it to: a job 
 |---|---|---|
 | The prompt craft | ✅ identical philosophy | ✅ |
 | Your cost | your Claude subscription | free tier + Pro |
-| Memory | markdown files in your fork | structured, searchable, cross-device |
+| Memory | markdown files in your fork | structured, searchable, cross-device, plus a confirmed-facts memory every check trusts |
+| Claim verification | the `/apply` reviewer flags unsourced claims per run | a groundedness reviewer on every rewrite, plus "this is true, remember it" so confirmed facts are never re-flagged |
 | CV ↔ story bank ↔ JD matching | manual, per session | automatic, across your whole pipeline |
 | Job pipeline tracking | a folder of files | tracker with per-vendor ATS rules |
 | Mock interviews | text chat | live voice, company-specific question banks |
 | Personality-aware coaching, human coaches | ❌ | ✅ |
 
-If the flat files start feeling like the bottleneck, that's the moment we built the product for: https://jobmentis.com/en/signup?ref=oss-prompts
+If the flat files start feeling like the bottleneck, that's the moment we built the product for: https://jobmentis.com/en/signup?ref=oss-readme
 
 ## FAQ
 
