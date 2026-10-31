@@ -31,6 +31,9 @@ If the user has a posting or careers URL, the host usually IS the answer, and th
 | `jobs.jobvite.com` | Jobvite |
 | `.applytojob.com` | JazzHR |
 | `jobs.personio.` | Personio |
+| `.pinpointhq.com` | Pinpoint |
+| `ats.rippling.com` | Rippling |
+| `jobs.gem.com` | Gem |
 
 This is an observation of the company using that system, not an inference. Stop here when it hits; the path segment or leftmost subdomain is also the company's board slug, which is worth telling the user (`boards.greenhouse.io/stripe` means the slug is `stripe`).
 
@@ -49,17 +52,24 @@ Every major vendor serves an unauthenticated JSON endpoint keyed by the company'
 | Workable | `https://apply.workable.com/api/v1/widget/accounts/<slug>` | 200 with a `name` field |
 | SmartRecruiters | `https://api.smartrecruiters.com/v1/companies/<slug>/postings?limit=1` | 200 with `totalFound` |
 | Recruitee | `https://<slug>.recruitee.com/api/offers/` | 200 with `offers[]` |
+| Personio | `https://<slug>.jobs.personio.de/xml` (also `.com`) | XML with a `<workzag-jobs>` root; count the `<position>` elements |
+| Teamtailor | `https://<slug>.teamtailor.com/jobs.rss` | an RSS feed; count the `<item>` elements |
+| BambooHR | `https://<slug>.bamboohr.com/careers/list` | 200 with `result[]`, **without a redirect** (an unknown slug redirects away) |
+| Breezy | `https://<slug>.breezy.hr/json` | 200 and an array |
+| Pinpoint | `https://<slug>.pinpointhq.com/postings.json` | `data[]` |
+| Rippling | `https://ats.rippling.com/api/v2/board/<slug>/jobs?page=0&pageSize=1` | 200 with `totalItems` |
+| Gem | `https://api.gem.com/job_board/v0/<slug>/job_posts/` | 200 and an array |
 
 Keep it to a handful of requests. Stop at the first confirmed hit; there is no prize for finding a second.
 
-Workday, iCIMS, Teamtailor, BambooHR and Personio have no public by-slug API, so they cannot be probed this way - they are only detectable from a URL (Step 1). "I could not probe for Workday" is not the same as "this company is not on Workday", and you must not report the second when you mean the first.
+Workday, iCIMS, Oracle Taleo, SAP SuccessFactors, Jobvite and JazzHR have no public by-slug API, so they cannot be probed this way - they are only detectable from a URL (Step 1). "I could not probe for Workday" is not the same as "this company is not on Workday", and you must not report the second when you mean the first.
 
 ## Step 3: Do not trust a bare hit
 
 A live board is not proof it belongs to the company you asked about. Three checks, in order, before you report anything:
 
-1. **The board's own declared name.** Greenhouse and Workable return the company name they belong to. If it disagrees with the company you were asked about, it is a different employer: `boards.greenhouse.io/latitude` answers "Latitude AI", which is not a company called Latitude. Reject the hit.
-2. **Open-role count.** A parked or abandoned board answers `200` with zero roles. Dozens of roles is a live employer; zero means say "a board exists but is empty", never "this is their ATS". Note that Lever distinguishes these properly: `200 []` is a real board with no openings, `404` is no board at all.
+1. **The board's own declared name.** Greenhouse, Workable, SmartRecruiters and Breezy return the company name in their JSON; Personio names it in `<subcompany>`, Teamtailor in the feed's channel `<title>`, Rippling as `companyName` on a single posting, and Pinpoint in its board page title ("Jobs at X | ..."). If it disagrees with the company you were asked about, it is a different employer: `boards.greenhouse.io/latitude` answers "Latitude AI", which is not a company called Latitude. Reject the hit.
+2. **Open-role count.** A parked or abandoned board answers `200` with zero roles. Dozens of roles is a live employer; zero means say "a board exists but is empty", never "this is their ATS". Note that Lever distinguishes these properly: `200 []` is a real board with no openings, `404` is no board at all. Also discard **demo boards**: Recruitee and Pinpoint serve template postings on unclaimed slugs (a single "(Example)" role, lorem-ipsum or hipster-ipsum copy). A board with only those is no board.
 3. **Common-word names collide.** Short or generic company names share slugs with unrelated companies - a board called `target`, `phoenix`, `resilience`, `bird` or `remote` very often belongs to someone else. When the name is a common English word AND the board is small, report it as unconfirmed and ask the user to eyeball the board URL. Do not resolve the ambiguity by guessing.
 
 ## Step 4: Apply the vendor's rules to the CV
