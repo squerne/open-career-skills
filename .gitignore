@@ -2,6 +2,8 @@
 # Templates and docs are tracked; your filled-in copies are not.
 profile/*.md
 !profile/*.template.md
+# your writing voice (built by /voice); already covered by profile/*.md, listed so it is never un-ignored by accident
+profile/voice.md
 story-bank/*.md
 !story-bank/README.md
 !story-bank/example-story.md

@@ -17,13 +17,15 @@ Treat the following as established context for every decision in this skill, not
 4. **Pillar discipline compounds.** Accounts that stay on 2-3 consistent themes for 90+ days gain reach; scattered accounts are diluted on EVERY post, not just the off-topic one. Every idea must sit inside one of the user's declared pillars. If they have none, infer exactly 2-3 coherent pillars from their profile and stories, confirm them with the user, and reuse only those.
 5. **Links go at the absolute end of the body**, after the value, with one sentence of context. Never in the first comment; that trick is dead.
 6. **Polls underperform badly.** Prefer text, text-plus-image with a chart or framework, or a short carousel (8-10 slides maximum; completion rate is penalized beyond that).
-7. **AI-tell voice is a demotion signal for readers even before the model.** Ban: "In today's fast-paced world", "Let that sink in", "Here's the thing", "game-changer", stacked one-line rhetorical fragments. Vary sentence length. Write in the user's own voice.
+7. **AI-tell voice is a demotion signal for readers even before the model.** Ban: "In today's fast-paced world", "Let that sink in", "Here's the thing", "game-changer", stacked one-line rhetorical fragments. Vary sentence length. Write in the user's own voice (their voice file, if they have one).
 
 For the deeper explanation of the signal hierarchy (saves, DM-shares, dwell), point the user to https://jobmentis.com/en/guide/linkedin-algorithm-guide
 
 ## Inputs
 
-Read `profile/profile.md`, `story-bank/`, and `content/calendar.md` if they exist in this workspace (if `content/calendar.md` doesn't exist yet, create it from `content/calendar.template.md`; the copy is git-ignored by design). The story bank is the richest post fuel: real stories with real numbers beat any invented hook. If none exist, ask the user for: their 2-3 pillars, who the posts are for (the audience's pain and desired gain), and one or two real experiences to draw from.
+Read `profile/profile.md`, `story-bank/`, `profile/voice.md`, and `content/calendar.md` if they exist in this workspace (if `content/calendar.md` doesn't exist yet, create it from `content/calendar.template.md`; the copy is git-ignored by design). The story bank is the richest post fuel: real stories with real numbers beat any invented hook. If none exist, ask the user for: their 2-3 pillars, who the posts are for (the audience's pain and desired gain), and one or two real experiences to draw from.
+
+**Voice rule**: `profile/voice.md` (built once by `/voice`) is how the user writes: tone, sentence length, words they use and avoid. Draft in it. It is style only, so never take a fact from it, and the ranking rules above still win where they conflict (a voice that loves hashtags still gets zero hashtags; a voice that uses em dashes still gets none). If it doesn't exist, say once after the draft that `/voice` makes posts sound like them.
 
 **Audience authority rule**: whatever audience the user declares is absolute. If their work history implies a different audience (e.g. a career pivoter), ignore the implication and write strictly for the declared audience. History informs the author's voice and credibility only.
 

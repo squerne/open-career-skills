@@ -41,6 +41,7 @@ The workspace strings eight skills into one loop. You can enter anywhere, but th
 | Stage | Reads | Writes |
 |---|---|---|
 | /setup | your CV or interview answers | `profile/profile.md` (git-ignored) |
+| /voice | 2-3 things you wrote yourself | `profile/voice.md` (git-ignored, style only) |
 | /mine-evidence | your git repos (read-only), `gh` PRs | `story-bank/*.md` with `## Evidence` |
 | /extract-story | your braindump | `story-bank/*.md` |
 | /find-jobs | profile, `portals.md`, tracker (dedup) | nothing (conversational) |
@@ -48,7 +49,7 @@ The workspace strings eight skills into one loop. You can enter anywhere, but th
 | /detect-ats | a company name or posting URL; public vendor board APIs | nothing (conversational) |
 | /mock-interview | profile, story bank, tracker, past debriefs | `output/interview-feedback-*.md` |
 | /upskill | all `fit-evaluation.md` files, tracker, profile | `output/upskill-report-*.md` |
-| /plan-content, /cover-letter | profile, story bank | `output/`, `content/calendar.md` |
+| /plan-content, /cover-letter | profile, story bank, voice file | `output/`, `content/calendar.md` |
 
 ## Where the hard stops are (and why)
 

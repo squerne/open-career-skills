@@ -13,4 +13,4 @@ Offer the user three paths and follow the one they pick:
 
 Then write the completed `profile/profile.md`. Show the user a short summary of what you recorded (not the full file) and remind them: this file is the memory of the workspace; every skill (`ruthless-cv-optimizer`, `star-story-extractor`, `linkedin-360brew-planner`, `cover-letter-writer`, `mock-interviewer`) reads it, and it is git-ignored so it stays out of any public fork.
 
-If they mentioned any story-worthy achievement during setup, suggest running `/extract-story` on it next.
+If they mentioned any story-worthy achievement during setup, suggest running `/extract-story` on it next. If `profile/voice.md` does not exist, also suggest `/voice` once: it reads 2 or 3 things they wrote and makes letters, posts and follow-ups sound like them. Keep the two files apart: facts go in the profile, style goes in the voice file.
