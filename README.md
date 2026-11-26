@@ -28,7 +28,7 @@ Run them locally in Claude Code or Claude Desktop, on your own subscription, wit
 
 ## The /apply pipeline
 
-The skills also compose into one end-to-end flow per job:
+The skills also compose into one end-to-end flow per job. Before it, `/rank` pre-scores a whole search with the same eligibility gate plus your deal-breakers, one read-only scorer per posting. After it, `/outcome` records what came back and drafts follow-ups and thank-you notes into `output/outbox/` for you to send.
 
 <picture>
   <img src="assets/terminal-apply.svg" alt="An /apply run: fit evaluation with an honest verdict, a hard stop for your call, drafting from your facts only, the reviewer restoring a mutated number, tracker entry" width="100%">
@@ -57,7 +57,9 @@ claude
 
 ```
 /find-jobs        # real postings matching your profile, fit-triaged
+/rank             # pre-score every new posting from a search, pick one for /apply
 /apply <url>      # the full pipeline: evaluate, draft, review, track
+/outcome          # record replies, archive what you sent, follow-up drafts in output/outbox/
 /optimize-cv      # paste a JD, get a tailored CV in output/
 /extract-story    # braindump a win, get a STAR story in story-bank/
 /mine-evidence    # harvest achievements from your git history
@@ -65,9 +67,10 @@ claude
 /cover-letter     # tailored letter in output/
 /mock-interview   # one question at a time, debrief at the end
 /upskill          # learning plan from gaps recurring across applications
+/voice            # once: learn your writing style from 2-3 things you wrote
 ```
 
-Your personal data (`profile/profile.md`, your stories, your calendar, everything in `output/`) is **git-ignored by design**: even if you push your fork publicly, your CV and metrics stay local.
+Your personal data (`profile/profile.md`, `profile/voice.md`, your stories, your calendar, everything in `output/` including drafts in `output/outbox/`) is **git-ignored by design**: even if you push your fork publicly, your CV and metrics stay local.
 
 ### Option B: Claude Code plugin
 
@@ -123,7 +126,7 @@ Without the workspace, skills ask you to paste your CV instead of reading `profi
 
 ### Option F: plain chat (ChatGPT, claude.ai, Gemini)
 
-The five writing skills have self-contained paste-able versions in [`prompts/`](prompts/). Paste one as your first message and follow along. You lose the file-based memory; the prompts tell you what to paste each time. (`/apply`, `/find-jobs`, `/upskill`, and `/mine-evidence` need file and web tools, so they need one of the options above.)
+The five writing skills have self-contained paste-able versions in [`prompts/`](prompts/). Paste one as your first message and follow along. You lose the file-based memory; the prompts tell you what to paste each time. (`/apply`, `/rank`, `/outcome`, `/voice`, `/find-jobs`, `/upskill`, and `/mine-evidence` need file and web tools, so they need one of the options above.)
 
 ## Why we open-sourced this
 

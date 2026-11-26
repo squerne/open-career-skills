@@ -13,14 +13,16 @@ Corollary (groundedness): every factual claim in a generated asset must trace to
 - `profile/profile.md`: the user's career profile, created by `/setup` from `profile/profile.template.md`. **Read it before any career task.** If it doesn't exist, suggest `/setup` first.
 - `story-bank/`: one STAR story per file, named `YYYY-MM-short-slug.md` (format in `story-bank/README.md`). This is the user's achievement memory; skills read it for evidence and write to it via extraction.
 - `content/calendar.md`: LinkedIn pillars and post log, created from `content/calendar.template.md` on first use.
-- `tracker/applications.md`: the application log, created from `tracker/applications.template.md` by `/apply`. The memory of the pipeline: dedup for `/find-jobs`, rehearsal targets for the mock interviewer, gap history for `/upskill`.
+- `tracker/applications.md`: the application log, created from `tracker/applications.template.md` by `/apply`. The memory of the pipeline: dedup for `/find-jobs`, rehearsal targets for the mock interviewer, gap history for `/upskill`. `/rank` adds `ranked`/`vetoed`/`expired` rows; `/outcome` keeps `Last activity` and `Follow-ups`.
 - `output/`: generated CVs, cover letters, interview debriefs, per-application folders (`output/apply-<company>/`).
+- `profile/voice.md`: how the user writes (tone, sentence length, words used and avoided, sign-off), built once by `/voice` from `profile/voice.template.md`. Style only; facts never come from it. Every writing skill reads it.
+- `output/outbox/`: drafts (follow-ups, thank-you notes) from `/outcome`. Nothing in this workspace sends email or messages, even with a mail tool connected: the user sends, then deletes the draft. `output/apply-<company>/sent/` holds what was actually sent.
 - `documents/`: (optional, user-created) source materials like an exported CV.
 - `docs/`: WORKFLOW.md (the pipeline), SKILLS.md (per-skill contracts), TROUBLESHOOTING.md. Fork only; a plugin install has no `docs/`.
 
 **Where files go**: every file a skill writes goes in this folder. In a plugin install the skills themselves live in the plugin's install folder (under `~/.claude/plugins/`); never write there, because a plugin update replaces it.
 
-**Privacy invariant**: `.gitignore` keeps `profile/profile.md`, personal `story-bank/*.md` files, `content/calendar.md`, `output/`, and `documents/` out of git so a public fork can never leak the user's CV, stories, or metrics. Never weaken those rules, never write personal data into a `*.template.md` file, and never stage an ignored file with `git add -f`.
+**Privacy invariant**: `.gitignore` keeps `profile/profile.md`, `profile/voice.md`, personal `story-bank/*.md` files, `content/calendar.md`, `output/` (drafts in `output/outbox/` included), and `documents/` out of git so a public fork can never leak the user's CV, stories, or metrics. Never weaken those rules, never write personal data into a `*.template.md` file, and never stage an ignored file with `git add -f`.
 
 **Output discipline**: deliverables (CVs, letters, stories, debriefs) are written to their file first; the terminal gets a brief summary, the file path, and the skill's closing line, not a 500-word wall. Each skill specifies this; follow it.
 
@@ -40,6 +42,9 @@ Corollary (groundedness): every factual claim in a generated asset must trace to
 | Mine git history for achievements | `evidence-miner` skill (or `/mine-evidence`) |
 | Which ATS a company uses, and the CV rules it implies | `ats-detective` skill (or `/detect-ats`) |
 | Recurring skill gaps / what to learn | `/upskill` |
+| Pre-score a batch of postings from a search | `/rank` (one read-only scorer per posting; the pick goes to `/apply`) |
+| Record a reply, interview, offer, rejection or silence; draft a follow-up or thank-you | `/outcome` (drafts to `output/outbox/`, never sent) |
+| Make letters, posts and follow-ups sound like the user | `/voice` (builds `profile/voice.md`, style only) |
 | Build/refresh the profile | `/setup` |
 
 In a plugin install every command carries the plugin prefix: `/career-skills:apply`, `/career-skills:setup`, and so on.
