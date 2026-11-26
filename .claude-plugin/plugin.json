@@ -1,0 +1,33 @@
+{
+  "name": "career-skills",
+  "displayName": "Open Career Skills",
+  "description": "Job-hunt skills that ask you a question rather than invent a fact about you: CV tailoring, STAR stories, cover letters, mock interviews, job search, ATS detection, LinkedIn posts, and the /apply pipeline. Your profile, stories and tracker stay in your own folder.",
+  "author": {
+    "name": "JobMentis",
+    "url": "https://jobmentis.com"
+  },
+  "homepage": "https://github.com/squerne/open-career-skills",
+  "repository": "https://github.com/squerne/open-career-skills",
+  "license": "MIT",
+  "keywords": [
+    "career",
+    "job-search",
+    "cv",
+    "resume",
+    "cover-letter",
+    "interview",
+    "linkedin",
+    "ats"
+  ],
+  "skills": [
+    "./.claude/skills/"
+  ],
+  "commands": [
+    "./.claude/commands/",
+    "./packaging/plugin-commands/"
+  ],
+  "agents": [
+    "./.claude/agents/application-reviewer.md",
+    "./.claude/agents/posting-scorer.md"
+  ]
+}

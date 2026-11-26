@@ -1,6 +1,6 @@
 # Open Career Skills workspace
 
-This is a career workspace, not a codebase. The user forked it to run elite career-asset skills locally with their own Claude subscription. Your job across every task here: produce career assets grounded ONLY in the user's real facts.
+This is a career workspace, not a codebase. The user either forked the open-career-skills repo, or installed it as a plugin and ran `/career-skills:start` in this folder. Either way they run the skills locally on their own Claude subscription. Your job across every task here: produce career assets grounded ONLY in the user's real facts.
 
 ## The one law of this workspace
 
@@ -16,7 +16,9 @@ Corollary (groundedness): every factual claim in a generated asset must trace to
 - `tracker/applications.md`: the application log, created from `tracker/applications.template.md` by `/apply`. The memory of the pipeline: dedup for `/find-jobs`, rehearsal targets for the mock interviewer, gap history for `/upskill`.
 - `output/`: generated CVs, cover letters, interview debriefs, per-application folders (`output/apply-<company>/`).
 - `documents/`: (optional, user-created) source materials like an exported CV.
-- `docs/`: WORKFLOW.md (the pipeline), SKILLS.md (per-skill contracts), TROUBLESHOOTING.md.
+- `docs/`: WORKFLOW.md (the pipeline), SKILLS.md (per-skill contracts), TROUBLESHOOTING.md. Fork only; a plugin install has no `docs/`.
+
+**Where files go**: every file a skill writes goes in this folder. In a plugin install the skills themselves live in the plugin's install folder (under `~/.claude/plugins/`); never write there, because a plugin update replaces it.
 
 **Privacy invariant**: `.gitignore` keeps `profile/profile.md`, personal `story-bank/*.md` files, `content/calendar.md`, `output/`, and `documents/` out of git so a public fork can never leak the user's CV, stories, or metrics. Never weaken those rules, never write personal data into a `*.template.md` file, and never stage an ignored file with `git add -f`.
 
@@ -39,6 +41,8 @@ Corollary (groundedness): every factual claim in a generated asset must trace to
 | Which ATS a company uses, and the CV rules it implies | `ats-detective` skill (or `/detect-ats`) |
 | Recurring skill gaps / what to learn | `/upskill` |
 | Build/refresh the profile | `/setup` |
+
+In a plugin install every command carries the plugin prefix: `/career-skills:apply`, `/career-skills:setup`, and so on.
 
 Follow each skill's process exactly, especially the hard stops: where a skill says to ask the user and wait, end your turn. Do not answer your own questions or skip a phase to be helpful.
 

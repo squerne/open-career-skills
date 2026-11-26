@@ -38,9 +38,11 @@ The reviewer is a separate subagent that audits every claim in the drafts agains
 
 ## Install
 
-### Option A: use this workspace (recommended)
+In Claude Code, fork the workspace (A) or install the plugin (B). In the Claude app, upload the plugin to Cowork (C). In another coding agent, open the fork (D).
 
-The repo is a ready-to-run Claude Code career workspace with file-based memory: your profile in `profile/`, your STAR stories in `story-bank/`, your content calendar in `content/`.
+### Option A: fork the workspace (recommended)
+
+The whole repo, as your own copy: the docs, the paste-able prompts, and a folder you can version. The repo is a ready-to-run Claude Code career workspace with file-based memory: your profile in `profile/`, your STAR stories in `story-bank/`, your content calendar in `content/`.
 
 ```bash
 # fork on GitHub first (keep your fork private if you plan to push), then:
@@ -67,19 +69,61 @@ claude
 
 Your personal data (`profile/profile.md`, your stories, your calendar, everything in `output/`) is **git-ignored by design**: even if you push your fork publicly, your CV and metrics stay local.
 
-### Option B: install individual skills
+### Option B: Claude Code plugin
 
-Copy any skill folder into your own project or user skills directory:
+The skills install as a plugin; your data lives in a folder of your own. A plugin update replaces the skills and never touches that folder.
 
 ```bash
-cp -r .claude/skills/ruthless-cv-optimizer ~/.claude/skills/
+claude plugin marketplace add squerne/open-career-skills
+claude plugin install career-skills@open-career-skills
+mkdir -p ~/career && cd ~/career && claude
+# then, inside Claude Code:
+/career-skills:start
 ```
 
-Works in Claude Code and Claude Desktop (any agent that reads `SKILL.md` skills). Without the workspace, skills ask you to paste your CV instead of reading `profile/`.
+`/career-skills:start` copies the templates, the workspace rules (`CLAUDE.md`) and the privacy `.gitignore` into the folder, then runs setup. Every command carries the plugin prefix: `/career-skills:apply`, `/career-skills:find-jobs`, and so on. Always start Claude in that folder for career work. To get new versions: `claude plugin update career-skills@open-career-skills` (each commit to this repo is a new version).
 
-### Option C: plain chat (ChatGPT, claude.ai, Gemini)
+Install from GitHub as above, not by adding a local clone as a marketplace: a local install copies the whole folder into the plugin cache, personal files included.
 
-The five writing skills have self-contained paste-able versions in [`prompts/`](prompts/). Paste one as your first message and follow along. You lose the file-based memory; the prompts tell you what to paste each time. (`/apply`, `/find-jobs`, `/upskill`, and `/mine-evidence` need file and web tools, so they are Claude Code only.)
+### Option C: Claude Cowork (zip upload)
+
+Build the zip (needs Node 18+ and git, nothing to install):
+
+```bash
+git clone https://github.com/squerne/open-career-skills.git
+cd open-career-skills
+node packaging/build-plugin-zip.mjs   # writes dist/career-skills.zip
+```
+
+Then in the Claude app: **Customize > Plugins > Add > Upload plugin**, and pick the zip. Start a Cowork task on the folder where you want your career files and run `/career-skills:start`. Use Cowork rather than chat: chat has no folder to keep your profile in, and it skips the `/apply` reviewer.
+
+### Option D: Codex, Cursor, Gemini CLI, Antigravity
+
+Clone or fork the repo as in Option A and open the folder in your tool. [`AGENTS.md`](AGENTS.md) points the agent at the same rules and files Claude uses, and the skills are also in `.agents/skills/` in the [Agent Skills](https://agentskills.io) format:
+
+| Tool | Rules | Skills |
+|---|---|---|
+| Codex | reads `AGENTS.md` | `.agents/skills/`, pick one with `$` or `/skills` |
+| Cursor | reads `AGENTS.md` | `.agents/skills/` and `.claude/skills/` (each skill may show twice: same file), pick one with `/` |
+| Gemini CLI | reads `AGENTS.md` through the repo's `.gemini/settings.json` | `.agents/skills/`, check with `/skills list` |
+| Antigravity | reads `AGENTS.md` | `.agents/skills/`, pick one with `/` |
+
+For a workflow, type it as you would in Claude Code (`/setup`, `/apply <url>`): the agent reads `.claude/commands/<name>.md` and follows it. The `/apply` reviewer needs a separate pass; tools without subagents ask you to run it in a fresh session. These tools are supported through their documented formats; the skills are tested end-to-end in Claude Code only.
+
+### Option E: install individual skills
+
+Copy any skill folder into your user skills directory:
+
+```bash
+cp -r .claude/skills/ruthless-cv-optimizer ~/.claude/skills/   # Claude Code
+cp -r .claude/skills/ruthless-cv-optimizer ~/.agents/skills/   # Codex, Gemini CLI, Cursor
+```
+
+Without the workspace, skills ask you to paste your CV instead of reading `profile/`.
+
+### Option F: plain chat (ChatGPT, claude.ai, Gemini)
+
+The five writing skills have self-contained paste-able versions in [`prompts/`](prompts/). Paste one as your first message and follow along. You lose the file-based memory; the prompts tell you what to paste each time. (`/apply`, `/find-jobs`, `/upskill`, and `/mine-evidence` need file and web tools, so they need one of the options above.)
 
 ## Why we open-sourced this
 
@@ -103,7 +147,7 @@ If the flat files start feeling like the bottleneck, that's the moment we built 
 ## FAQ
 
 **Do these work with models other than Claude?**
-The `prompts/` versions work with any capable chat model. The `SKILL.md` versions target Claude Code / Claude Desktop.
+The `SKILL.md` versions also run in Codex, Cursor, Gemini CLI and Antigravity (Option D). The `prompts/` versions work with any capable chat model.
 
 **Why do the skills refuse to add metrics to my CV?**
 Because invented numbers are the fastest way to fail an interview. The skills ask you for the real figure; if you don't have one, an unquantified true bullet beats a quantified fake one.

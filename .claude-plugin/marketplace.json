@@ -1,0 +1,17 @@
+{
+  "name": "open-career-skills",
+  "description": "Open Career Skills: Claude skills for the job hunt that refuse to invent facts about you.",
+  "owner": {
+    "name": "JobMentis",
+    "url": "https://jobmentis.com"
+  },
+  "plugins": [
+    {
+      "name": "career-skills",
+      "source": "./",
+      "description": "The skills, the /apply pipeline and its reviewer. Your data stays in your own folder: run /career-skills:start there once.",
+      "category": "productivity",
+      "tags": ["career", "job-search", "cv", "interview"]
+    }
+  ]
+}
