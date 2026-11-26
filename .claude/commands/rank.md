@@ -54,8 +54,8 @@ For every accepted scorecard, compute the overall score yourself: 0.35 x skills 
 
 Sort into five groups:
 
-1. **Shortlist**: scored, eligibility `Eligible` or `Not stated`, veto not a hit, overall 60 or more. Highest first. Carry every "not stated" as a `[check: ...]` note: silence is unknown, and the user should know what to ask.
-2. **Below the bar**: scored, under 60. One line each, no argument for applying.
+1. **Shortlist**: scored, eligibility `Eligible` or `Not stated`, veto not a hit, overall 60 or more (or the profile's `Skip below` line, if `/outcome` calibration set one). Highest first. Carry every "not stated" as a `[check: ...]` note: silence is unknown, and the user should know what to ask.
+2. **Below the bar**: scored, under that bar. One line each, no argument for applying.
 3. **Vetoed or not eligible**: with the deal-breaker or check, and the quoted line.
 4. **Expired**: with the reason.
 5. **Needs your eyes**: refused scorecards (and why), and postings that could not be fetched.
@@ -64,7 +64,7 @@ Sort into five groups:
 
 Then:
 - `mkdir -p output`, and write `output/rank-YYYY-MM-DD.md`: the five groups, every accepted scorecard with its computed overall, and the refusal reasons.
-- If `tracker/applications.md` does not exist, create it from `tracker/applications.template.md`. Append one row per posting in groups 1-4: date, company, role, the pre-score as `NN (pre)` (or `-`), status `ranked` (groups 1-2), `vetoed` (group 3) or `expired` (group 4), next step (`/apply` for the shortlist, otherwise `-`), and the posting URL in Assets. Group 5 gets no row, so the next `/rank` tries it again.
+- If `tracker/applications.md` does not exist, create it from `tracker/applications.template.md`. Append one row per posting in groups 1-4: date, company, role, the pre-score as `NN (pre)` (or `-`), status `ranked` (groups 1-2), `vetoed` (group 3) or `expired` (group 4), `-` for last activity and follow-ups, next step (`/apply` for the shortlist, otherwise `-`), and the posting URL in Assets. Group 5 gets no row, so the next `/rank` tries it again.
 
 ## Final console output (HARD STOP)
 

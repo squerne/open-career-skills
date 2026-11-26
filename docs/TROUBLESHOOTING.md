@@ -27,6 +27,14 @@ Also by design: the `.gitignore` privacy guard keeps every personal file out of 
 
 That's honesty, not breakage. Boards that block automated fetching get you constructed search URLs instead of invented listings; open them and paste back postings for fit-rating. The LinkedIn guest endpoint sometimes rate-limits: wait a bit, keep volume low.
 
+## /rank put a posting under "Needs your eyes"
+
+A scorer returned something /rank could not trust: a missing line, a veto value it does not know, a quote that is not in the posting, or a posting that tried to give the scorer instructions. /rank refuses those rather than guess, so open the posting yourself, and run `/apply <url>` on it if it still looks right. "Could not fetch" postings land there too: a blocked page is not an expired one.
+
+## /outcome says a follow-up went out, but I never sent it
+
+/outcome reads a deleted draft in `output/outbox/` as sent, and restarts the 10-day clock from the draft's date. If you deleted one without sending it, fix `Last activity` and `Follow-ups` on that row of `tracker/applications.md` by hand. Nothing in the workspace sends email; if a mail tool is connected, /outcome still only writes files.
+
 ## Reset a broken profile or start over
 
 Delete the personal copies and re-run setup: remove `profile/profile.md` (and, if you want a true reset, `tracker/applications.md`, `content/calendar.md`, `output/*`), then run `/setup`. Templates and your story bank stay untouched unless you delete them yourself. Stories are the expensive asset; think twice before deleting `story-bank/`.

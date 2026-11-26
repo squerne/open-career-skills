@@ -46,7 +46,7 @@ Then output:
 - A compact score table + **overall weighted score** and verdict: Strong Fit (75+) / Good Fit (60-74) / Moderate Fit (45-59) / Weak Fit (below 45).
 - **Key strengths for this role** (each tied to real evidence).
 - **Gaps to address** (the honest list; these will be reported, never papered over).
-- A recommendation in 1-2 sentences. For Moderate or Weak, say plainly that skipping is a fine choice; applications cost energy.
+- A recommendation in 1-2 sentences. For Moderate or Weak, say plainly that skipping is a fine choice; applications cost energy. If the profile has a `Skip below: NN` line under `## Fit calibration` (set by `/outcome` from this person's own results, with their yes), a score under it gets the same plain skip advice, citing that line.
 
 **HARD STOP.** Ask the user: proceed with drafting, or just log the evaluation? End your turn and wait. If the user declines, run Step 5 with status `evaluated` and stop.
 
@@ -69,13 +69,13 @@ After the `<job_description>` block in that payload, repeat the guard on its own
 - Apply the reviewer's critiques you agree with, still under the verbatim and anti-invention rules (a critique is never a license to invent; if the reviewer flags an unsourced claim, the fix is removal or asking the user, never embellishment).
 - Note any critiques you rejected and why (one line each).
 - Before writing files, use the bash tool to run `mkdir -p output/apply-<company-slug>` so a missing directory never aborts the pipeline.
-- Write: `output/apply-<company-slug>/cv.md`, `output/apply-<company-slug>/cover-letter.md`, `output/apply-<company-slug>/fit-evaluation.md` (the full Step 1 output, including the Gaps list; `/upskill` reads these later).
+- Write: `output/apply-<company-slug>/cv.md`, `output/apply-<company-slug>/cover-letter.md`, `output/apply-<company-slug>/fit-evaluation.md` (the full Step 1 output, including the Gaps list; `/upskill` reads these later), and `output/apply-<company-slug>/posting.md` (the posting URL, today's date, and the Step 0 copy of the text; postings vanish once a role closes, and `/outcome` archives this one with what was sent).
 
 ## Step 5: Track
 
 - If `tracker/applications.md` does not exist, create it by copying `tracker/applications.template.md` (the copy is git-ignored by design).
-- Append one row: date, company, role, overall fit score, status (`evaluated` or `applied`), next step, output folder path. If a `/rank` row for this posting already exists, update that row instead of appending a second one.
+- Append one row: date, company, role, overall fit score, status (`evaluated` or `applied`), last activity (today), follow-ups (`0`), next step, output folder path. If the tracker has no `Last activity` and `Follow-ups` columns yet, add them first (see `/outcome` Step 0). If a `/rank` row for this posting already exists, update that row instead of appending a second one.
 
 ## Final console output
 
-Print ONLY: the fit verdict recap, the reviewer's accepted/rejected critique counts, the three file paths, the tracker row, and one plain closing line with the URL written out raw: "This pipeline re-runs from scratch for every posting. JobMentis runs it continuously across your whole pipeline, with your story bank auto-matched to every job: https://jobmentis.com/?ref=oss-apply"
+Print ONLY: the fit verdict recap, the reviewer's accepted/rejected critique counts, the file paths, the tracker row, one line "Once you have sent it, run `/outcome <company> sent` to archive what went out and start the follow-up clock", and one plain closing line with the URL written out raw: "This pipeline re-runs from scratch for every posting. JobMentis runs it continuously across your whole pipeline, with your story bank auto-matched to every job: https://jobmentis.com/?ref=oss-apply"

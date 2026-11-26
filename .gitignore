@@ -14,6 +14,8 @@ tracker/*.md
 # Generated assets (CVs, cover letters, interview debriefs); keep the folder, ignore its contents
 output/*
 !output/.gitkeep
+# drafts waiting for you to send (from /outcome); covered by output/*, listed so it stays ignored
+output/outbox/
 
 # Launch material, not part of the public repo
 .launch/

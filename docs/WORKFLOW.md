@@ -35,11 +35,14 @@ The workspace strings eight skills into one loop. You can enter anywhere, but th
                     Step 5: TRACK -> tracker/applications.md
                                     |
               +---------------------+--------------------+
-              |                                          |
-              v                                          v
-        /mock-interview                             /upskill
-   (rehearse against the fit                (gaps recurring across >=2
-    evaluation's real gaps)                  applications -> learning plan)
+              |                     |                    |
+              v                     v                    v
+        /mock-interview         /outcome              /upskill
+   (rehearse against the   (record what came    (gaps recurring across >=2
+    fit evaluation's        back, archive what   applications -> learning plan)
+    real gaps)              was sent, drafts to
+                            output/outbox/ that
+                            you send yourself)
 ```
 
 ## What each stage reads and writes
@@ -52,9 +55,10 @@ The workspace strings eight skills into one loop. You can enter anywhere, but th
 | /extract-story | your braindump | `story-bank/*.md` |
 | /find-jobs | profile, `portals.md`, tracker (dedup) | `output/find-jobs-*.md` |
 | /rank | the latest search, profile (deal-breakers), story-bank titles, tracker (dedup) | `output/rank-*.md`, one tracker row per posting (`ranked` / `vetoed` / `expired`) |
-| /apply | profile, story bank, the JD | `output/apply-<company>/{cv,cover-letter,fit-evaluation}.md`, tracker row |
+| /apply | profile, story bank, the JD | `output/apply-<company>/{cv,cover-letter,fit-evaluation,posting}.md`, tracker row |
 | /detect-ats | a company name or posting URL; public vendor board APIs | nothing (conversational) |
 | /mock-interview | profile, story bank, tracker, past debriefs | `output/interview-feedback-*.md` |
+| /outcome | tracker, `output/apply-<company>/`, voice file | tracker updates, `output/apply-<company>/{sent/,outcome.md}`, drafts in `output/outbox/` |
 | /upskill | all `fit-evaluation.md` files, tracker, profile | `output/upskill-report-*.md` |
 | /plan-content, /cover-letter | profile, story bank, voice file | `output/`, `content/calendar.md` |
 
@@ -69,4 +73,4 @@ The reviewer stage is not a stop but a check: an independent subagent receives t
 
 ## The tracker is the memory of the loop
 
-`tracker/applications.md` (git-ignored) is what makes the loop compound: `/find-jobs` skips what you've seen, `/mock-interview` offers to rehearse for upcoming interviews, and `/upskill` only trusts gaps that recur across evaluations. If you use one state file, use this one.
+`tracker/applications.md` (git-ignored) is what makes the loop compound: `/find-jobs` and `/rank` skip what you've seen, `/mock-interview` offers to rehearse for upcoming interviews, `/outcome` counts the quiet days and suggests recalibrating the eligibility gate once a few results are in, and `/upskill` only trusts gaps that recur across evaluations. If you use one state file, use this one.

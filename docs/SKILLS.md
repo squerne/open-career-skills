@@ -29,6 +29,7 @@ The contract for every surface in this workspace. Paths are relative to the repo
 | `/find-jobs [focus]` | Job discovery | `job-search` |
 | `/rank [file or URLs]` | Batch pre-score of every new posting from a search: the `/apply` eligibility gate plus your deal-breakers (a veto it cannot read is refused, not shortlisted), deadlines flagged, dead postings marked expired, the pick handed to `/apply` | `posting-scorer` agent, one per posting, in parallel |
 | `/apply [URL or JD]` | Full pipeline: evaluate, draft, review, track | optimizer + letter + `application-reviewer` agent |
+| `/outcome [<company> <event> \| followup \| calibrate]` | Record a sent application, interview, offer, rejection or silence; archive the CV, letter and posting actually sent; a thank-you draft in the same turn as an interview; follow-up drafts for applications quiet 10+ days (at most 2 each, claims only from what was sent); suggests recalibrating the eligibility gate from what got interviews. Drafts go to `output/outbox/` and are never sent | - |
 | `/upskill [URL]` | Recurring-gap analysis and learning plan | - |
 | `/mine-evidence [repo paths]` | Achievement harvesting | `evidence-miner` + `star-story-extractor` |
 | `/detect-ats [company or URL]` | Identify the ATS and its CV rules | `ats-detective` |
@@ -48,5 +49,7 @@ The contract for every surface in this workspace. Paths are relative to the repo
 | `profile/voice.md` | NO (git-ignored; template is) | /voice; read by the letter writer, the LinkedIn planner, /outcome drafts |
 | `story-bank/*.md` | NO (README + example are) | extractor, miner |
 | `content/calendar.md` | NO (template is) | planner |
-| `tracker/applications.md` | NO (template is) | /apply, /rank |
+| `tracker/applications.md` | NO (template is) | /apply, /rank, /outcome |
+| `output/apply-<company>/sent/` | NO | /outcome (the CV, letter and posting actually sent) |
+| `output/outbox/` | NO | /outcome drafts; you send them yourself, then delete them |
 | `output/**` | NO | all generators |
