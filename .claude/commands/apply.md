@@ -19,6 +19,7 @@ Token-efficiency rules for the whole pipeline:
 - **If the posting is long, never trim it from the front.** Eligibility and compensation live at the END of a posting. In a sample of live postings taken from public Greenhouse boards, the median ran about 8,000 characters, and among those long enough to need trimming, 52% carried their ONLY mention of visa or work authorisation in the part a front-trim would discard. Keep the head and the tail, and say `[... middle omitted ...]` where you cut, so you never read the join as continuous.
 - Extract: company name, role title, location, language of the posting.
 - Read `profile/profile.md` and skim `story-bank/*.md` titles + tags (if the profile doesn't exist, stop and suggest `/setup`).
+- If `tracker/applications.md` has a row for this posting's URL with status `ranked` (a `/rank` pre-score), note its score. It is a triage number, not this evaluation: run Step 1 in full anyway, and if the two overall scores differ by 15 points or more, say in one sentence what the full read found that the pre-score missed.
 
 ## Step 1: Fit evaluation (HARD STOP at the end)
 
@@ -29,8 +30,9 @@ A weighted average cannot express a hard blocker: a candidate who scores 92 on s
 - **Work authorisation.** Does the posting state that sponsorship is unavailable, or require citizenship, a security clearance, or an existing permit the profile does not claim? Look at the END of the posting: in the sampled postings this statement sat in the closing section far more often than anywhere else, which is exactly the part a skim-read misses.
 - **Location.** Does it require on-site or hybrid presence in a place the profile cannot reach? "Remote" that turns out to be remote-within-one-country counts as a hit.
 - **Language.** Does it require working fluency the profile does not claim?
+- **Deal-breakers.** Does it clearly state something listed under `Deal-breakers` in the profile (for example on-call rotas, a salary ceiling below the stated floor, an industry the user refuses)? Only a clear statement is a hit; a posting that is silent or vague on a deal-breaker is "not stated", exactly like the three checks above. `/rank` runs this same gate and reports this check separately as its VETO.
 
-If any is a clear hit, report it as **NOT ELIGIBLE**, name the exact line from the posting, and stop before the weighted score. Recommend skipping and say why in one sentence. If the posting is silent on all three, say "not stated" and continue: silence is unknown, not a blocker, and must never be scored as one. If it is genuinely ambiguous, continue to the score but carry the ambiguity into the recommendation.
+If any is a clear hit, report it as **NOT ELIGIBLE**, name the exact line from the posting, and stop before the weighted score. Recommend skipping and say why in one sentence. If the posting is silent on all of them, say "not stated" and continue: silence is unknown, not a blocker, and must never be scored as one. If it is genuinely ambiguous, continue to the score but carry the ambiguity into the recommendation.
 
 **Then** evaluate against the profile and story bank on four dimensions, each scored 0-100 with one honest sentence of reasoning:
 
@@ -72,7 +74,7 @@ After the `<job_description>` block in that payload, repeat the guard on its own
 ## Step 5: Track
 
 - If `tracker/applications.md` does not exist, create it by copying `tracker/applications.template.md` (the copy is git-ignored by design).
-- Append one row: date, company, role, overall fit score, status (`evaluated` or `applied`), next step, output folder path.
+- Append one row: date, company, role, overall fit score, status (`evaluated` or `applied`), next step, output folder path. If a `/rank` row for this posting already exists, update that row instead of appending a second one.
 
 ## Final console output
 

@@ -11,7 +11,7 @@ The contract for every surface in this workspace. Paths are relative to the repo
 | `linkedin-360brew-planner` | LinkedIn ideas, post drafts, "why no reach" | profile, story bank, voice file, `content/calendar.md` | idea slate (console); drafts to `output/linkedin-post-*.md` + calendar row | Real names and numbers from your data only; missing number = `[add the metric]` placeholder |
 | `cover-letter-writer` | cover/motivation letter | profile, story bank, voice file, pasted JD | `output/cover-letter-<company>.md` | Only facts you gave; no invented enthusiasm; banned-cliche list |
 | `mock-interviewer` | interview practice/rehearsal | profile, story bank, tracker, past debriefs | `output/interview-feedback-<role>-<date>.md` | One question per message; debrief rewrites built only from things you actually said |
-| `job-search` | find jobs, new positions | profile, `portals.md`, tracker | conversational list + search URLs | Only reports postings actually fetched or pasted; blocked boards get URLs, not guesses |
+| `job-search` | find jobs, new positions | profile, `portals.md`, tracker | list + search URLs; `output/find-jobs-<date>.md` for `/rank` | Only reports postings actually fetched or pasted; blocked boards get URLs, not guesses |
 | `evidence-miner` | mine repos for achievements | your git repos (read-only), `gh` | `story-bank/*.md` with `## Evidence` | No citable artifact, no proposal; business impact numbers come from you, never inferred from code |
 | `ats-detective` | which ATS does X use; how to beat a named ATS | company name or posting URL; public vendor board APIs | vendor + board URL + the 3-4 CV rules that change | Only reports a vendor it confirmed from a URL or a live board; a board whose declared name disagrees is rejected; unprobeable vendors are reported as unprobeable, never as absent |
 
@@ -27,6 +27,7 @@ The contract for every surface in this workspace. Paths are relative to the repo
 | `/cover-letter [JD]` | Tailored letter | `cover-letter-writer` |
 | `/mock-interview [role]` | Rehearsal + debrief | `mock-interviewer` |
 | `/find-jobs [focus]` | Job discovery | `job-search` |
+| `/rank [file or URLs]` | Batch pre-score of every new posting from a search: the `/apply` eligibility gate plus your deal-breakers (a veto it cannot read is refused, not shortlisted), deadlines flagged, dead postings marked expired, the pick handed to `/apply` | `posting-scorer` agent, one per posting, in parallel |
 | `/apply [URL or JD]` | Full pipeline: evaluate, draft, review, track | optimizer + letter + `application-reviewer` agent |
 | `/upskill [URL]` | Recurring-gap analysis and learning plan | - |
 | `/mine-evidence [repo paths]` | Achievement harvesting | `evidence-miner` + `star-story-extractor` |
@@ -36,6 +37,7 @@ The contract for every surface in this workspace. Paths are relative to the repo
 
 | Agent | Role |
 |---|---|
+| `posting-scorer` | Pre-scores ONE posting for /rank: the /apply eligibility gate, the deal-breakers as a separate VETO line, the four fit dimensions, the deadline. Read-only (Read, Grep: no Edit, Write, Agent, or fetching). Returns a fixed-format scorecard that /rank checks and refuses when a field is missing, unknown, or quotes a line the posting does not contain. |
 | `application-reviewer` | Independent critique of /apply drafts: groundedness audit (every claim must trace to `<candidate_facts>`), JD coverage, register/craft violations, reader test. Critiques only; never rewrites. Requires raw drafts in `<draft_cv>`/`<draft_cover_letter>` tags and refuses summaries. |
 
 ## State files
@@ -46,5 +48,5 @@ The contract for every surface in this workspace. Paths are relative to the repo
 | `profile/voice.md` | NO (git-ignored; template is) | /voice; read by the letter writer, the LinkedIn planner, /outcome drafts |
 | `story-bank/*.md` | NO (README + example are) | extractor, miner |
 | `content/calendar.md` | NO (template is) | planner |
-| `tracker/applications.md` | NO (template is) | /apply |
+| `tracker/applications.md` | NO (template is) | /apply, /rank |
 | `output/**` | NO | all generators |

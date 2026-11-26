@@ -9,6 +9,12 @@ The workspace strings eight skills into one loop. You can enter anywhere, but th
  profile/          story-bank/            real postings
  profile.md    (evidence-cited STAR)    (fit-triaged list)
    |                    |                       |
+   |                    |                       v
+   |                    |                 /rank (optional)
+   |                    |          one read-only scorer per posting:
+   |                    |          gate + deal-breakers, deadlines,
+   |                    |          expired marked  [HARD STOP: pick]
+   |                    |                       |
    +--------------------+-----------+-----------+
                                     |
                                     v
@@ -44,7 +50,8 @@ The workspace strings eight skills into one loop. You can enter anywhere, but th
 | /voice | 2-3 things you wrote yourself | `profile/voice.md` (git-ignored, style only) |
 | /mine-evidence | your git repos (read-only), `gh` PRs | `story-bank/*.md` with `## Evidence` |
 | /extract-story | your braindump | `story-bank/*.md` |
-| /find-jobs | profile, `portals.md`, tracker (dedup) | nothing (conversational) |
+| /find-jobs | profile, `portals.md`, tracker (dedup) | `output/find-jobs-*.md` |
+| /rank | the latest search, profile (deal-breakers), story-bank titles, tracker (dedup) | `output/rank-*.md`, one tracker row per posting (`ranked` / `vetoed` / `expired`) |
 | /apply | profile, story bank, the JD | `output/apply-<company>/{cv,cover-letter,fit-evaluation}.md`, tracker row |
 | /detect-ats | a company name or posting URL; public vendor board APIs | nothing (conversational) |
 | /mock-interview | profile, story bank, tracker, past debriefs | `output/interview-feedback-*.md` |
@@ -53,7 +60,7 @@ The workspace strings eight skills into one loop. You can enter anywhere, but th
 
 ## Where the hard stops are (and why)
 
-Two places the pipeline deliberately ends its turn and waits for you:
+Two places the pipeline deliberately ends its turn and waits for you (plus `/rank`, which stops on its shortlist so you pick what goes to `/apply`):
 
 1. **After the fit evaluation.** Applying costs energy; a Weak Fit deserves a conscious "yes anyway" or a guilt-free skip (logged as `evaluated`). The eligibility gate runs BEFORE the score and can stop the pipeline on its own: a hard blocker (no sponsorship, unreachable location, a language you do not have) is not something a weighted average should be allowed to dilute, and finding it after you have drafted a CV is finding it too late.
 2. **After the CV diagnosis questions.** The optimizer asks about suspect numbers and empty bullets instead of inventing. Your answers are folded in verbatim; skipped questions mean the claim ships without the number, never with a made-up one.

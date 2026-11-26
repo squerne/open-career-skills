@@ -42,3 +42,12 @@
 - Target companies:
 - Salary context:
 - Constraints (remote, visa, timing):
+
+## Deal-breakers (optional)
+
+<!-- Things that rule a job out whatever its score. /rank and /apply skip a posting
+     that clearly states one of these; a posting that is silent on one is NOT skipped.
+     One per line, concrete. Example: "on-call rotas", "salary below 60k EUR",
+     "gambling or tobacco industry", "more than 2 office days a week". -->
+
+-
