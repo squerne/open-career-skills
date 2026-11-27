@@ -52,8 +52,8 @@ test('settings: the deny list blocks uploads, remote shells and secret reads', (
     assert.ok(settings.permissions.deny.includes(rule), rule);
 });
 
-test('settings: allow grants only the local tools', () => {
-  assert.deepEqual(settings.permissions.allow, ['Bash(node tools/posting-check.mjs *)']);
+test('settings: allow grants only the two local tools', () => {
+  assert.deepEqual(settings.permissions.allow, ['Bash(node tools/posting-check.mjs *)', 'Bash(node tools/scan.mjs *)']);
 });
 
 test('every surface that reads a posting runs the check first', () => {

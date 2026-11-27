@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workzag-jobs>
+<position>
+    <id>2908898</id>
+    <subcompany>Personio SE &amp; Co. KG</subcompany>
+    <office>Munich</office>
+    <additionalOffices>
+        <office>Berlin</office>
+    </additionalOffices>
+    <department>Product and Tech</department>
+    <name>[Sharin - Test]</name>
+    <jobDescriptions></jobDescriptions>
+    <employmentType>permanent</employmentType>
+    <seniority>experienced</seniority>
+    <schedule>full-time</schedule>
+    <yearsOfExperience>7-10</yearsOfExperience>
+    <occupation>product_management</occupation>
+    <occupationCategory>marketing_and_product</occupationCategory>
+    <createdAt>2026-11-26T16:55:38+00:00</createdAt>
+</position>
+<position>
+    <id>2908467</id>
+    <subcompany>Personio SE &amp; Co. KG</subcompany>
+    <office>Munich</office>
+    <additionalOffices>
+        <office>Berlin</office>
+    </additionalOffices>
+    <department>Product and Tech</department>
+    <name>Anthony Test - Software Developer</name>
+    <jobDescriptions></jobDescriptions>
+    <employmentType>permanent</employmentType>
+    <seniority>experienced</seniority>
+    <schedule>full-time</schedule>
+    <yearsOfExperience>7-10</yearsOfExperience>
+    <occupation>general_and_other_engineering</occupation>
+    <occupationCategory>engineering</occupationCategory>
+    <createdAt>2026-11-26T13:59:59+00:00</createdAt>
+    <salaryInformation>
+        <min>110000.00</min>
+        <currencySymbol>€</currencySymbol>
+        <currencyCode>EUR</currencyCode>
+        <type>yearly</type>
+    </salaryInformation>
+</position>
+<position>
+    <id>2885178</id>
+    <office>Berlin</office>
+    <department>Go to Market</department>
+    <name>Business Development Representative (d/f/m)</name>
+    <jobDescriptions></jobDescriptions>
+    <employmentType>permanent</employmentType>
+    <seniority>entry-level</seniority>
+    <schedule>full-time</schedule>
+    <occupation>business_development_and_new_accounts</occupation>
+    <occupationCategory>sales_and_business_development</occupationCategory>
+    <createdAt>2026-11-11T17:43:42+00:00</createdAt>
+</position>
+</workzag-jobs>

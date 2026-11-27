@@ -10,6 +10,8 @@ story-bank/*.md
 content/calendar.md
 tracker/*.md
 !tracker/*.template.md
+# what tools/scan.mjs has already shown you
+tracker/seen.tsv
 
 # Generated assets (CVs, cover letters, interview debriefs); keep the folder, ignore its contents
 output/*

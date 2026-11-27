@@ -4,7 +4,13 @@ Where the `job-search` skill looks. `<q>` = URL-encoded query, `<loc>` = locatio
 
 ## Employers' own boards (read these first)
 
-Public job-board APIs the vendors publish for this purpose.
+Public job-board APIs the vendors publish for this purpose. For the employers in `tracker/companies.md`, `node tools/scan.mjs` reads these feeds without the model (it also reads Workable, SmartRecruiters and Pinpoint), so read one by hand only for an employer not in that file.
+
+Quirks worth knowing, by hand or in the scanner:
+- Greenhouse `content` is HTML with its entities encoded once more (`&lt;p&gt;`): decode once, then read it as HTML.
+- Workable needs `?details=true` for descriptions, and lists one row per place for the same job: group by `shortcode`.
+- Recruitee and Pinpoint boards can hold seeded demo postings ("(Example)", lorem or hipster ipsum): those are not jobs.
+- SmartRecruiters pages 100 at a time and reports `totalFound`: the number you read is a page cap, not the board's count.
 
 | Vendor | Pattern |
 |---|---|

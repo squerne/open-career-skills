@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": "110549",
+      "benefits": "<div><!--block-->Wayfarers lumbersexual disrupt chia mustache flexitarian. Organic actually yr blog cray asymmetrical readymade vape flexitarian wayfarers pug. Kinfolk copper mug scenester blue bottle kickstarter. Whatever before they sold out dreamcatcher bushwick, affogato portland thundercats tax",
+      "benefits_header": "Benefits",
+      "compensation": "Competitive",
+      "compensation_minimum": null,
+      "compensation_maximum": null,
+      "compensation_currency": null,
+      "compensation_frequency": null,
+      "compensation_visible": true,
+      "deadline_at": null,
+      "description": "<div><!--block-->Vape tattooed gentrify pug, hell of raw denim viral sustainable actually chambray tilde taiyaki. Banh mi glossier neutra occupy. Messenger bag af cliche actually quinoa chartreuse four loko cold-pressed synth godard ennui pok pok man braid prism. Literally vinyl shabby chic iPhone p",
+      "employment_type": "full_time",
+      "employment_type_text": "Full Time",
+      "key_responsibilities": "<div><!--block-->Vice forage stumptown, 3 wolf moon freegan craft beer yr cronut wolf. La croix craft beer woke air plant plaid. Heirloom keytar iPhone fanny pack meditation drinking vinegar narwhal bespoke ugh tumblr farm-to-table pug aesthetic vaporware cray. La croix salvia dreamcatcher pork bell",
+      "key_responsibilities_header": "Key Responsibilities",
+      "reporting_to": null,
+      "skills_knowledge_expertise": "<div><!--block-->+1 tacos pickled snackwave live-edge, try-hard cray leggings small batch adaptogen semiotics banh mi microdosing. Stumptown enamel pin before they sold out waistcoat. Selfies mixtape cloud bread green juice. Kombucha fanny pack iPhone tacos, cold-pressed palo santo health goth brook",
+      "skills_knowledge_expertise_header": "Skills, Knowledge and Experience",
+      "title": "Head of DEI - Belfast",
+      "url": "https://lendable.pinpointhq.com/en/postings/fd4e1bd9-9882-4220-8962-e32bca9268b7",
+      "path": "/en/postings/fd4e1bd9-9882-4220-8962-e32bca9268b7",
+      "workplace_type": "onsite",
+      "workplace_type_text": "Onsite",
+      "job": {
+        "id": "122436",
+        "requisition_id": "0005",
+        "department": {
+          "id": "27954",
+          "name": "Product"
+        },
+        "division": {
+          "id": "1220",
+          "name": "Hooli"
+        },
+        "structure_custom_group_one": null
+      },
+      "location": {
+        "id": "17640",
+        "city": null,
+        "name": "Belfast",
+        "postal_code": null,
+        "province": null,
+        "street_address": null
+      }
+    },
+    {
+      "id": "110550",
+      "benefits": "<div><!--block-->Wayfarers lumbersexual disrupt chia mustache flexitarian. Organic actually yr blog cray asymmetrical readymade vape flexitarian wayfarers pug. Kinfolk copper mug scenester blue bottle kickstarter. Whatever before they sold out dreamcatcher bushwick, affogato portland thundercats tax",
+      "benefits_header": "Benefits",
+      "compensation": "Competitive",
+      "compensation_minimum": null,
+      "compensation_maximum": null,
+      "compensation_currency": null,
+      "compensation_frequency": null,
+      "compensation_visible": true,
+      "deadline_at": null,
+      "description": "<div><!--block-->Vape tattooed gentrify pug, hell of raw denim viral sustainable actually chambray tilde taiyaki. Banh mi glossier neutra occupy. Messenger bag af cliche actually quinoa chartreuse four loko cold-pressed synth godard ennui pok pok man braid prism. Literally vinyl shabby chic iPhone p",
+      "employment_type": "full_time",
+      "employment_type_text": "Full Time",
+      "key_responsibilities": "<div><!--block-->Vice forage stumptown, 3 wolf moon freegan craft beer yr cronut wolf. La croix craft beer woke air plant plaid. Heirloom keytar iPhone fanny pack meditation drinking vinegar narwhal bespoke ugh tumblr farm-to-table pug aesthetic vaporware cray. La croix salvia dreamcatcher pork bell",
+      "key_responsibilities_header": "Key Responsibilities",
+      "reporting_to": null,
+      "skills_knowledge_expertise": "<div><!--block-->+1 tacos pickled snackwave live-edge, try-hard cray leggings small batch adaptogen semiotics banh mi microdosing. Stumptown enamel pin before they sold out waistcoat. Selfies mixtape cloud bread green juice. Kombucha fanny pack iPhone tacos, cold-pressed palo santo health goth brook",
+      "skills_knowledge_expertise_header": "Skills, Knowledge and Experience",
+      "title": "Head of DEI - US",
+      "url": "https://lendable.pinpointhq.com/en/postings/0db9506b-32a0-449f-826d-dee4a9b7e191",
+      "path": "/en/postings/0db9506b-32a0-449f-826d-dee4a9b7e191",
+      "workplace_type": "onsite",
+      "workplace_type_text": "Onsite",
+      "job": {
+        "id": "122437",
+        "requisition_id": "0004",
+        "department": {
+          "id": "27950",
+          "name": "Engineering"
+        },
+        "division": {
+          "id": "1220",
+          "name": "Hooli"
+        },
+        "structure_custom_group_one": null
+      },
+      "location": {
+        "id": "17642",
+        "city": null,
+        "name": "Washington",
+        "postal_code": null,
+        "province": null,
+        "street_address": null
+      }
+    }
+  ]
+}

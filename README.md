@@ -57,6 +57,7 @@ claude
 
 ```
 /find-jobs        # real postings matching your profile, fit-triaged
+                  # (with tracker/companies.md, `node tools/scan.mjs` reads those boards for no tokens)
 /rank             # pre-score every new posting from a search, pick one for /apply
 /apply <url>      # the full pipeline: evaluate, draft, review, track
 /outcome          # record replies, archive what you sent, follow-up drafts in output/outbox/
@@ -169,9 +170,10 @@ Yes. See [CONTRIBUTING.md](CONTRIBUTING.md). The quality bar: no skill may fabri
 
 ## Acknowledgments / Credits
 
-This repo stands on ideas from two MIT-licensed projects, reimplemented (not copied) for this workspace:
+This repo stands on ideas from three MIT-licensed projects, reimplemented (not copied) for this workspace:
 
 - **[MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search)**: the fork-and-run workspace pattern, and the concepts behind our `/apply` drafter-reviewer pipeline, the application tracker, and `/upskill` gap analysis. Its posting guard and permission lists (v1.7.3) are the model for our `tools/posting-check.mjs`, the `ask` and `deny` rules in `.claude/settings.json`, and the no-hooks rule in [SECURITY.md](SECURITY.md). If you want LaTeX/PDF CV output or Danish job-board CLIs, use his repo; it does both better than we ever will in Markdown.
+- **[career-ops-hq/career-ops](https://github.com/career-ops-hq/career-ops)**: the zero-token board scanner, a script that reads employers' boards and hands the agent only the new matches. Our `tools/scan.mjs`, its companies file and its seen file follow that design.
 - **[Play-New/apply-new](https://github.com/Play-New/apply-new)**: the principle that career evidence should come from work artifacts and that every prose claim should trace to underlying data. Our `evidence-miner` skill and the reviewer's groundedness audit are descendants of that idea.
 
 ## License

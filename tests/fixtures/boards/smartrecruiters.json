@@ -1,0 +1,425 @@
+{
+  "offset": 0,
+  "limit": 100,
+  "totalFound": 5191,
+  "content": [
+    {
+      "id": "744000163931039",
+      "name": "Asesor Comercial de Calentadores Segmento Residencial Bogotá ",
+      "uuid": "6c55954f-b6b3-437f-8504-f2a2974f11ce",
+      "jobAdId": "40799262-260f-45b3-85c4-78059d99af6e",
+      "defaultJobAd": true,
+      "refNumber": "REF301871X",
+      "company": {
+        "identifier": "BoschGroup",
+        "name": "Bosch Group"
+      },
+      "releasedDate": "2026-11-26T23:39:42.049Z",
+      "location": {
+        "city": "Bogotá",
+        "region": "Cundinamarca",
+        "country": "co",
+        "address": "Autopista Norte 108 A-50",
+        "postalCode": "110111",
+        "remote": false,
+        "hybrid": false,
+        "latitude": "4.696021099999999",
+        "longitude": "-74.0551816",
+        "fullLocation": "Bogotá, Cundinamarca, Colombia"
+      },
+      "industry": {
+        "id": "mechanical_engineering",
+        "label": "Mechanical Or Industrial Engineering"
+      },
+      "department": {},
+      "function": {
+        "id": "sales",
+        "label": "Sales"
+      },
+      "typeOfEmployment": {
+        "id": "permanent",
+        "label": "Full-time"
+      },
+      "experienceLevel": {
+        "id": "associate",
+        "label": "Associate"
+      },
+      "customField": [
+        {
+          "fieldId": "5abe2a4ab60a5e486a2d9b1d",
+          "fieldLabel": "Contract type",
+          "valueId": "1e46492b-d24f-460c-b095-38cf08a778d8",
+          "valueLabel": "Unlimited"
+        },
+        {
+          "fieldId": "5abe28e96d8bc56863dd9746",
+          "fieldLabel": "Tariff Area",
+          "valueId": "80dd98c7-c5ee-4818-90bc-f6608b339166",
+          "valueLabel": "Colombia Local Grades"
+        },
+        {
+          "fieldId": "586a997ee4b05fd937b86098",
+          "fieldLabel": "Legal Entity(acronym)",
+          "valueId": "17ea9024-3b84-45f4-8126-01748fa43b8c",
+          "valueLabel": "RBCO"
+        },
+        {
+          "fieldId": "586a99b5e4b0daa006ae1079",
+          "fieldLabel": "Working Location",
+          "valueId": "f993c3b8-5c48-4bbb-8971-4a65fca734af",
+          "valueLabel": "Bogota"
+        },
+        {
+          "fieldId": "5abe295a6d8bc56863dd9747",
+          "fieldLabel": "Global Salary Level",
+          "valueId": "427b1359-5057-4375-a2ae-6c649782296d",
+          "valueLabel": "Experienced/ Middle Tariff"
+        },
+        {
+          "fieldId": "69ca83a2489188782a1e9f87",
+          "fieldLabel": "Direct Or Indirect",
+          "valueId": "0d8b2ae9-fc67-447b-9165-201f59f71e90",
+          "valueLabel": "Direct"
+        },
+        {
+          "fieldId": "5abe29f9b60a5e486a2d9b1c",
+          "fieldLabel": "Working hours",
+          "valueId": "60756b3e-dbab-4353-ac3a-0064d2bb27d8",
+          "valueLabel": "Full-time"
+        },
+        {
+          "fieldId": "586a9995e4b0daa006ae1078",
+          "fieldLabel": "Legal Entity",
+          "valueId": "ac40ae51-3cf3-4683-9bdd-9e334dd485be",
+          "valueLabel": "Robert Bosch Ltda."
+        },
+        {
+          "fieldId": "691cf1c93001c782b9560ab7",
+          "fieldLabel": "Division full name",
+          "valueId": "65a82db8-6dd3-40f0-a812-01522dc95503",
+          "valueLabel": "Home Comfort"
+        },
+        {
+          "fieldId": "5abe27936d8bc56863dd9745",
+          "fieldLabel": "Position type",
+          "valueId": "c7b4da31-6f38-405a-b2e8-08a76e3c3f2c",
+          "valueLabel": "Professional"
+        },
+        {
+          "fieldId": "COUNTRY",
+          "fieldLabel": "Country/Region",
+          "valueId": "co",
+          "valueLabel": "Colombia"
+        },
+        {
+          "fieldId": "586a971ee4b0daa006ae1077",
+          "fieldLabel": "Brands",
+          "valueId": "default",
+          "valueLabel": "Bosch Group"
+        },
+        {
+          "fieldId": "586a996ce4b05fd937b86097",
+          "fieldLabel": "Working Country",
+          "valueId": "d03b04da-0d15-491b-a74a-c27e8a6f4acc",
+          "valueLabel": "Colombia"
+        },
+        {
+          "fieldId": "586a9b22e4b05fd937b8609a",
+          "fieldLabel": "Local Grade",
+          "valueId": "7df5e90f-5737-4a34-adbe-5dc43b52cfeb",
+          "valueLabel": "CO__MV"
+        },
+        {
+          "fieldId": "586a99a5e4b05fd937b86099",
+          "fieldLabel": "Division",
+          "valueId": "TT",
+          "valueLabel": "HC"
+        }
+      ],
+      "visibility": "PUBLIC",
+      "ref": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000163931039",
+      "language": {
+        "code": "es-MX",
+        "label": "Spanish (LATAM)",
+        "labelNative": "español (LATAM)"
+      }
+    },
+    {
+      "id": "744000163927449",
+      "name": "Logistics Cost Specialist",
+      "uuid": "2218eb69-2e81-46b3-b3c0-23ce46476b11",
+      "jobAdId": "91f01f15-3574-46b9-8ca0-41b4c5493cd4",
+      "defaultJobAd": true,
+      "refNumber": "REF301557N",
+      "company": {
+        "identifier": "BoschGroup",
+        "name": "Bosch Group"
+      },
+      "releasedDate": "2026-11-26T21:29:42.660Z",
+      "location": {
+        "city": "Toluca",
+        "region": "State of Mexico",
+        "country": "mx",
+        "address": "Robert Bosch 405",
+        "remote": false,
+        "hybrid": false,
+        "fullLocation": "Toluca, State of Mexico, Mexico"
+      },
+      "industry": {
+        "id": "automotive",
+        "label": "Automotive"
+      },
+      "department": {},
+      "function": {
+        "id": "supply_chain",
+        "label": "Supply Chain"
+      },
+      "typeOfEmployment": {
+        "id": "permanent",
+        "label": "Full-time"
+      },
+      "experienceLevel": {
+        "id": "associate",
+        "label": "Associate"
+      },
+      "customField": [
+        {
+          "fieldId": "5abe2a4ab60a5e486a2d9b1d",
+          "fieldLabel": "Contract type",
+          "valueId": "1e46492b-d24f-460c-b095-38cf08a778d8",
+          "valueLabel": "Unlimited"
+        },
+        {
+          "fieldId": "5abe28e96d8bc56863dd9746",
+          "fieldLabel": "Tariff Area",
+          "valueId": "540ff3f7-a953-4856-97e3-f2202d80c57c",
+          "valueLabel": "Mexico Local Grades"
+        },
+        {
+          "fieldId": "586a997ee4b05fd937b86098",
+          "fieldLabel": "Legal Entity(acronym)",
+          "valueId": "BSMX",
+          "valueLabel": "BSMX"
+        },
+        {
+          "fieldId": "586a99b5e4b0daa006ae1079",
+          "fieldLabel": "Working Location",
+          "valueId": "Toluca",
+          "valueLabel": "Toluca"
+        },
+        {
+          "fieldId": "5abe295a6d8bc56863dd9747",
+          "fieldLabel": "Global Salary Level",
+          "valueId": "4eb55129-0528-4879-b132-1d17e25df928",
+          "valueLabel": "Senior/ Upper Tariff"
+        },
+        {
+          "fieldId": "69ca83a2489188782a1e9f87",
+          "fieldLabel": "Direct Or Indirect",
+          "valueId": "1aefbf4c-c10a-422e-a975-a504a7117792",
+          "valueLabel": "Indirect"
+        },
+        {
+          "fieldId": "5abe29f9b60a5e486a2d9b1c",
+          "fieldLabel": "Working hours",
+          "valueId": "60756b3e-dbab-4353-ac3a-0064d2bb27d8",
+          "valueLabel": "Full-time"
+        },
+        {
+          "fieldId": "586a9995e4b0daa006ae1078",
+          "fieldLabel": "Legal Entity",
+          "valueId": "Robert Bosch México Sistemas Automotrices, S.A. de C.V.",
+          "valueLabel": "Robert Bosch México Sistemas Automotrices, S.A. de C.V."
+        },
+        {
+          "fieldId": "691cf1c93001c782b9560ab7",
+          "fieldLabel": "Division full name",
+          "valueId": "8c60a3d2-ff3d-43aa-be7f-632acc1a6bc8",
+          "valueLabel": "Electrified Motion"
+        },
+        {
+          "fieldId": "5abe27936d8bc56863dd9745",
+          "fieldLabel": "Position type",
+          "valueId": "c7b4da31-6f38-405a-b2e8-08a76e3c3f2c",
+          "valueLabel": "Professional"
+        },
+        {
+          "fieldId": "COUNTRY",
+          "fieldLabel": "Country/Region",
+          "valueId": "mx",
+          "valueLabel": "Mexico"
+        },
+        {
+          "fieldId": "586a971ee4b0daa006ae1077",
+          "fieldLabel": "Brands",
+          "valueId": "default",
+          "valueLabel": "Bosch Group"
+        },
+        {
+          "fieldId": "586a996ce4b05fd937b86097",
+          "fieldLabel": "Working Country",
+          "valueId": "MX",
+          "valueLabel": "Mexico"
+        },
+        {
+          "fieldId": "586a9b22e4b05fd937b8609a",
+          "fieldLabel": "Local Grade",
+          "valueId": "MX_E4",
+          "valueLabel": "MX_E4"
+        },
+        {
+          "fieldId": "586a99a5e4b05fd937b86099",
+          "fieldLabel": "Division",
+          "valueId": "ED",
+          "valueLabel": "EM"
+        }
+      ],
+      "visibility": "PUBLIC",
+      "ref": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000163927449",
+      "language": {
+        "code": "en",
+        "label": "English",
+        "labelNative": "English (US)"
+      }
+    },
+    {
+      "id": "744000163925969",
+      "name": "Test Engineer (VS7)",
+      "uuid": "8ce4aaa4-c4ad-476c-8405-5380aebb3efc",
+      "jobAdId": "9a836226-1fdd-486b-ba57-f94c9ad63aec",
+      "defaultJobAd": true,
+      "refNumber": "REF297583X",
+      "company": {
+        "identifier": "BoschGroup",
+        "name": "Bosch Group"
+      },
+      "releasedDate": "2026-11-26T20:55:51.117Z",
+      "location": {
+        "city": "CiudadJuarez",
+        "region": "CHIHUAHUA",
+        "country": "mx",
+        "address": "Av. Robert Bosch #1150 Parque Ind. Rio Bravo",
+        "postalCode": "32557",
+        "remote": false,
+        "hybrid": false,
+        "fullLocation": "CiudadJuarez, CHIHUAHUA, Mexico"
+      },
+      "industry": {
+        "id": "electrical_manufacturing",
+        "label": "Electrical And Electronic Manufacturing"
+      },
+      "department": {},
+      "function": {
+        "id": "engineering",
+        "label": "Engineering"
+      },
+      "typeOfEmployment": {
+        "id": "permanent",
+        "label": "Full-time"
+      },
+      "experienceLevel": {
+        "id": "associate",
+        "label": "Associate"
+      },
+      "customField": [
+        {
+          "fieldId": "5abe2a4ab60a5e486a2d9b1d",
+          "fieldLabel": "Contract type",
+          "valueId": "1e46492b-d24f-460c-b095-38cf08a778d8",
+          "valueLabel": "Unlimited"
+        },
+        {
+          "fieldId": "5abe28e96d8bc56863dd9746",
+          "fieldLabel": "Tariff Area",
+          "valueId": "540ff3f7-a953-4856-97e3-f2202d80c57c",
+          "valueLabel": "Mexico Local Grades"
+        },
+        {
+          "fieldId": "586a997ee4b05fd937b86098",
+          "fieldLabel": "Legal Entity(acronym)",
+          "valueId": "SAME",
+          "valueLabel": "SAME"
+        },
+        {
+          "fieldId": "586a99b5e4b0daa006ae1079",
+          "fieldLabel": "Working Location",
+          "valueId": "Juarez",
+          "valueLabel": "Juarez"
+        },
+        {
+          "fieldId": "5abe295a6d8bc56863dd9747",
+          "fieldLabel": "Global Salary Level",
+          "valueId": "427b1359-5057-4375-a2ae-6c649782296d",
+          "valueLabel": "Experienced/ Middle Tariff"
+        },
+        {
+          "fieldId": "69ca83a2489188782a1e9f87",
+          "fieldLabel": "Direct Or Indirect",
+          "valueId": "1aefbf4c-c10a-422e-a975-a504a7117792",
+          "valueLabel": "Indirect"
+        },
+        {
+          "fieldId": "5abe29f9b60a5e486a2d9b1c",
+          "fieldLabel": "Working hours",
+          "valueId": "60756b3e-dbab-4353-ac3a-0064d2bb27d8",
+          "valueLabel": "Full-time"
+        },
+        {
+          "fieldId": "586a9995e4b0daa006ae1078",
+          "fieldLabel": "Legal Entity",
+          "valueId": "Robert Bosch Sistemas Automotrices, S.A. de C.V.",
+          "valueLabel": "Robert Bosch Sistemas Automotrices, S.A. de C.V."
+        },
+        {
+          "fieldId": "691cf1c93001c782b9560ab7",
+          "fieldLabel": "Division full name",
+          "valueId": "acbd0fb4-afd1-49f8-8abc-ec454a4e33bd",
+          "valueLabel": "Mobility Electronics"
+        },
+        {
+          "fieldId": "5abe27936d8bc56863dd9745",
+          "fieldLabel": "Position type",
+          "valueId": "c7b4da31-6f38-405a-b2e8-08a76e3c3f2c",
+          "valueLabel": "Professional"
+        },
+        {
+          "fieldId": "COUNTRY",
+          "fieldLabel": "Country/Region",
+          "valueId": "mx",
+          "valueLabel": "Mexico"
+        },
+        {
+          "fieldId": "586a971ee4b0daa006ae1077",
+          "fieldLabel": "Brands",
+          "valueId": "default",
+          "valueLabel": "Bosch Group"
+        },
+        {
+          "fieldId": "586a996ce4b05fd937b86097",
+          "fieldLabel": "Working Country",
+          "valueId": "MX",
+          "valueLabel": "Mexico"
+        },
+        {
+          "fieldId": "586a9b22e4b05fd937b8609a",
+          "fieldLabel": "Local Grade",
+          "valueId": "MX_E3",
+          "valueLabel": "MX_E3"
+        },
+        {
+          "fieldId": "586a99a5e4b05fd937b86099",
+          "fieldLabel": "Division",
+          "valueId": "AE",
+          "valueLabel": "ME"
+        }
+      ],
+      "visibility": "PUBLIC",
+      "ref": "https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000163925969",
+      "language": {
+        "code": "en",
+        "label": "English",
+        "labelNative": "English (US)"
+      }
+    }
+  ]
+}

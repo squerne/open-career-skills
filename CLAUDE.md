@@ -18,6 +18,8 @@ Corollary (groundedness): every factual claim in a generated asset must trace to
 - `profile/voice.md`: how the user writes (tone, sentence length, words used and avoided, sign-off), built once by `/voice` from `profile/voice.template.md`. Style only; facts never come from it. Every writing skill reads it.
 - `output/outbox/`: drafts (follow-ups, thank-you notes) from `/outcome`. Nothing in this workspace sends email or messages, even with a mail tool connected: the user sends, then deletes the draft. `output/apply-<company>/sent/` holds what was actually sent.
 - `documents/`: (optional, user-created) source materials like an exported CV.
+- `tracker/companies.md`: the employers whose boards `tools/scan.mjs` reads (company, vendor, board slug), created from `tracker/companies.template.md`; `/detect-ats` appends the boards it confirms. `tracker/seen.tsv` holds what the scanner has already listed. Both git-ignored.
+- `tools/scan.mjs`: reads those boards through the vendors' public APIs without the model and writes the new matches to `output/scan-<date>.md`. Read that list, never the raw feeds.
 - `tools/posting-check.mjs`: the posting check. Every posting is saved under `output/postings/`, checked, and read only as the cleaned copy (see SECURITY.md). It advises; the user decides.
 - `docs/`: WORKFLOW.md (the pipeline), SKILLS.md (per-skill contracts), TROUBLESHOOTING.md. Fork only; a plugin install has no `docs/`.
 

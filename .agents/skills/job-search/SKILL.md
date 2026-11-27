@@ -13,7 +13,11 @@ Read `profile/profile.md` for target roles, skills, and location; ask only for w
 
 ## Step 1: Employers' own careers boards
 
-Start here: it is the employer's own posting, with nothing in between. For employers the user names, or ones that fit the profile, read the vendor's public job-board API (the patterns are in `portals.md`, and `ats-detective` finds which vendor a company uses). Check the employer's robots.txt before reading a company's own careers site: some forbid it, and if so, give the user the link instead.
+Start here: it is the employer's own posting, with nothing in between.
+
+**If `tracker/companies.md` exists, run the scanner instead of reading boards yourself:** `node tools/scan.mjs` (in a plugin install, `node "${CLAUDE_PLUGIN_ROOT}/tools/scan.mjs"`; add `--title`/`--place` for a focus override, `--since 7d` for the recent ones, `--verify` to check each new posting's page). It reads every board in that file through the vendor's public API, keeps only new postings matching the profile's target roles and places, runs the posting check on each text, and writes `output/scan-<date>.md`. Read that file, not the feeds: a 300-posting board then costs a few lines instead of its whole JSON. Its saved texts in `output/postings/` are already checked. Report the boards it could not read as "could not read", never as "no jobs".
+
+For employers not in that file, read the vendor's public job-board API yourself (the patterns are in `portals.md`, and `ats-detective` finds which vendor a company uses, and adds the board to `tracker/companies.md` so the next scan covers it). Check the employer's robots.txt before reading a company's own careers site: some forbid it, and if so, give the user the link instead.
 
 ## Step 2: Independent job boards, from their public feeds
 

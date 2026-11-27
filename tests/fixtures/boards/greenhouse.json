@@ -1,0 +1,229 @@
+{
+  "jobs": [
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/gitlab/jobs/8771512002",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "internal_job_id": 6509478002,
+      "location": {
+        "name": "Remote, Canada; Remote, United States"
+      },
+      "metadata": [
+        {
+          "id": 4595831002,
+          "name": "Quota Coverage Type",
+          "value": "n/a",
+          "value_type": "single_select"
+        }
+      ],
+      "id": 8771512002,
+      "updated_at": "2026-11-20T11:49:04-05:00",
+      "requisition_id": "6918",
+      "title": "Backend Engineer, GitLab Orbit",
+      "company_name": "GitLab",
+      "first_published": "2026-10-23T18:47:07-04:00",
+      "language": "en",
+      "application_deadline": null,
+      "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered users and more than 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.&lt;/p&gt;\n&lt;p&gt;The same principles built into our products are reflected in how our team works: we embrace AI as a core productivity multiplier, with all team members expect",
+      "departments": [
+        {
+          "id": 4115239002,
+          "name": "Data Engineering",
+          "child_ids": [],
+          "parent_id": 4011044002
+        }
+      ],
+      "offices": [
+        {
+          "id": 4040904002,
+          "name": "United States of America",
+          "location": null,
+          "child_ids": [
+            4040902002
+          ],
+          "parent_id": 4019551002
+        }
+      ],
+      "ai_disclaimer": null,
+      "include_ai_disclaimer": null,
+      "ai_opt_out_request_url": null
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/gitlab/jobs/8704363002",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "internal_job_id": 6478405002,
+      "location": {
+        "name": "Remote, Canada; Remote, Poland; Remote, United Kingdom"
+      },
+      "metadata": [
+        {
+          "id": 4595831002,
+          "name": "Quota Coverage Type",
+          "value": "n/a",
+          "value_type": "single_select"
+        }
+      ],
+      "id": 8704363002,
+      "updated_at": "2026-11-10T10:45:04-05:00",
+      "requisition_id": "6808",
+      "title": "Backend Engineer (Python),AI Engineering: Agent Foundations",
+      "company_name": "GitLab",
+      "first_published": "2026-08-19T09:38:27-04:00",
+      "language": "en",
+      "application_deadline": null,
+      "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered users and more than 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.&lt;/p&gt;\n&lt;p&gt;The same principles built into our products are reflected in how our team works: we embrace AI as a core productivity multiplier, with all team members expect",
+      "departments": [
+        {
+          "id": 4115238002,
+          "name": "AI Engineering",
+          "child_ids": [],
+          "parent_id": 4011044002
+        }
+      ],
+      "offices": [
+        {
+          "id": 4142718002,
+          "name": "Poland",
+          "location": null,
+          "child_ids": [],
+          "parent_id": 4019553002
+        }
+      ],
+      "ai_disclaimer": null,
+      "include_ai_disclaimer": null,
+      "ai_opt_out_request_url": null
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/gitlab/jobs/8533016002",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "internal_job_id": 6407770002,
+      "location": {
+        "name": "Remote, North America"
+      },
+      "metadata": [
+        {
+          "id": 4595831002,
+          "name": "Quota Coverage Type",
+          "value": "Overlay",
+          "value_type": "single_select"
+        }
+      ],
+      "id": 8533016002,
+      "updated_at": "2026-11-06T15:25:07-05:00",
+      "requisition_id": "6349",
+      "title": "Customer Success Manager - East ",
+      "company_name": "GitLab",
+      "first_published": "2026-06-23T17:12:13-04:00",
+      "language": "en",
+      "application_deadline": null,
+      "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered users and more than 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.&lt;/p&gt;\n&lt;p&gt;The same principles built into our products are reflected in how our team works: we embrace AI as a core productivity multiplier, with all team members expect",
+      "departments": [
+        {
+          "id": 4016437002,
+          "name": "Customer Success",
+          "child_ids": [],
+          "parent_id": 4011043002
+        }
+      ],
+      "offices": [
+        {
+          "id": 4019551002,
+          "name": "North America",
+          "location": null,
+          "child_ids": [
+            4040901002,
+            4040904002,
+            4040902002
+          ],
+          "parent_id": null
+        }
+      ],
+      "ai_disclaimer": null,
+      "include_ai_disclaimer": null,
+      "ai_opt_out_request_url": null
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/gitlab/jobs/8940982002",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "internal_job_id": 6582801002,
+      "location": {
+        "name": "Bangalore, India"
+      },
+      "metadata": [
+        {
+          "id": 4595831002,
+          "name": "Quota Coverage Type",
+          "value": "n/a",
+          "value_type": "single_select"
+        }
+      ],
+      "id": 8940982002,
+      "updated_at": "2026-11-26T17:42:31-05:00",
+      "requisition_id": "7426",
+      "title": "Applied AI Engineer, Enterprise AI",
+      "company_name": "GitLab",
+      "first_published": "2026-11-23T17:02:31-05:00",
+      "language": "en",
+      "application_deadline": null,
+      "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered users and more than 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.&lt;/p&gt;\n&lt;p&gt;The same principles built into our products are reflected in how our team works: we embrace AI as a core productivity multiplier, with all team members expect",
+      "departments": [
+        {
+          "id": 4069215002,
+          "name": "Enterprise Applications",
+          "child_ids": [],
+          "parent_id": 4118834002
+        }
+      ],
+      "offices": [
+        {
+          "id": 4112140002,
+          "name": "India",
+          "location": null,
+          "child_ids": [],
+          "parent_id": 4019590002
+        }
+      ],
+      "ai_disclaimer": null,
+      "include_ai_disclaimer": null,
+      "ai_opt_out_request_url": null
+    }
+  ],
+  "meta": {
+    "total": 4
+  }
+}

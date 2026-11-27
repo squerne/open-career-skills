@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node tools/posting-check.mjs *)"
+      "Bash(node tools/posting-check.mjs *)",
+      "Bash(node tools/scan.mjs *)"
     ],
     "ask": [
       "Edit(.claude/settings.json)",

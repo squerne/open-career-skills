@@ -11,7 +11,7 @@ The contract for every surface in this workspace. Paths are relative to the repo
 | `linkedin-360brew-planner` | LinkedIn ideas, post drafts, "why no reach" | profile, story bank, voice file, `content/calendar.md` | idea slate (console); drafts to `output/linkedin-post-*.md` + calendar row | Real names and numbers from your data only; missing number = `[add the metric]` placeholder |
 | `cover-letter-writer` | cover/motivation letter | profile, story bank, voice file, pasted JD | `output/cover-letter-<company>.md` | Only facts you gave; no invented enthusiasm; banned-cliche list |
 | `mock-interviewer` | interview practice/rehearsal | profile, story bank, tracker, past debriefs | `output/interview-feedback-<role>-<date>.md` | One question per message; debrief rewrites built only from things you actually said |
-| `job-search` | find jobs, new positions | profile, `portals.md`, tracker | list + search URLs; `output/find-jobs-<date>.md` for `/rank` | Only reports postings actually fetched or pasted; blocked boards get URLs, not guesses |
+| `job-search` | find jobs, new positions | profile, `portals.md`, tracker, `output/scan-<date>.md` from `tools/scan.mjs` | list + search URLs; `output/find-jobs-<date>.md` for `/rank` | Only reports postings actually fetched or pasted; blocked boards get URLs, not guesses |
 | `evidence-miner` | mine repos for achievements | your git repos (read-only), `gh` | `story-bank/*.md` with `## Evidence` | No citable artifact, no proposal; business impact numbers come from you, never inferred from code |
 | `ats-detective` | which ATS does X use; how to beat a named ATS | company name or posting URL; public vendor board APIs | vendor + board URL + the 3-4 CV rules that change | Only reports a vendor it confirmed from a URL or a live board; a board whose declared name disagrees is rejected; unprobeable vendors are reported as unprobeable, never as absent |
 
@@ -50,6 +50,9 @@ The contract for every surface in this workspace. Paths are relative to the repo
 | `story-bank/*.md` | NO (README + example are) | extractor, miner |
 | `content/calendar.md` | NO (template is) | planner |
 | `tracker/applications.md` | NO (template is) | /apply, /rank, /outcome |
+| `tracker/companies.md` | NO (template is) | /detect-ats appends confirmed boards; read by `tools/scan.mjs` |
+| `tracker/seen.tsv` | NO | `tools/scan.mjs` (what it has already listed) |
+| `output/postings/*.md` | NO | the posting check: cleaned postings, the only copy a skill reads |
 | `output/apply-<company>/sent/` | NO | /outcome (the CV, letter and posting actually sent) |
 | `output/outbox/` | NO | /outcome drafts; you send them yourself, then delete them |
 | `output/**` | NO | all generators |
