@@ -15,6 +15,13 @@ Contributions are welcome: new skills, sharper rules inside existing skills, pas
 5. Add a thin command wrapper in `.claude/commands/` if the skill benefits from a slash command.
 6. Add one row to the README's skill table.
 7. Run `node packaging/sync.mjs` and commit what it writes (see Packaging).
+8. If the skill reads a job posting, run it through `tools/posting-check.mjs` first, as `/apply` Step 0 does. `tests/wiring.test.mjs` lists the surfaces that must.
+
+## Tests
+
+`node --test tests/*.test.mjs` runs everything: the posting check against its corpus (`tests/fixtures/postings/`), and the wiring (permission lists, no hooks, the check called before every posting read). No dependencies. A new attack shape is a new fixture plus one test; an honest posting the check wrongly flags is worth a fixture too.
+
+**No hooks.** A PR that adds a hook to `.claude/settings.json` or the plugin is closed: a hook runs with no prompt. See [SECURITY.md](SECURITY.md).
 
 ## Packaging
 
@@ -48,5 +55,6 @@ For Cowork, `node packaging/build-plugin-zip.mjs` writes `dist/career-skills.zip
 - [ ] Tested end-to-end in a fresh Claude Code session (say so in the PR, with the scenario you ran)
 - [ ] No em dash characters in the copy (use commas, colons, or hyphens)
 - [ ] `node packaging/sync.mjs --check` passes
+- [ ] `node --test tests/*.test.mjs` passes
 
 Contributors are credited in the PR history and, for new skills, in the skill's frontmatter via an `author` field if you want it.

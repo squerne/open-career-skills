@@ -1,0 +1,62 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node tools/posting-check.mjs *)"
+    ],
+    "ask": [
+      "Edit(.claude/settings.json)",
+      "Edit(.claude/settings.local.json)",
+      "Edit(.claude/skills/**)",
+      "Edit(.claude/commands/**)",
+      "Edit(.claude/agents/**)",
+      "Edit(.agents/**)",
+      "Edit(.claude-plugin/**)",
+      "Edit(.gemini/**)",
+      "Edit(.github/**)",
+      "Edit(CLAUDE.md)",
+      "Edit(AGENTS.md)",
+      "Edit(tools/**)",
+      "Edit(packaging/**)",
+      "Bash(git push *)",
+      "Bash(git * push *)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.gnupg/**)",
+      "Bash(curl -d*)",
+      "Bash(curl * -d*)",
+      "Bash(curl --data*)",
+      "Bash(curl * --data*)",
+      "Bash(curl --json*)",
+      "Bash(curl * --json*)",
+      "Bash(curl -F*)",
+      "Bash(curl * -F*)",
+      "Bash(curl --form*)",
+      "Bash(curl * --form*)",
+      "Bash(curl -T*)",
+      "Bash(curl * -T*)",
+      "Bash(curl --upload-file*)",
+      "Bash(curl * --upload-file*)",
+      "Bash(curl -X *)",
+      "Bash(curl * -X *)",
+      "Bash(curl --request*)",
+      "Bash(curl * --request*)",
+      "Bash(wget --post-*)",
+      "Bash(wget * --post-*)",
+      "Bash(wget --body-*)",
+      "Bash(wget * --body-*)",
+      "Bash(wget --method*)",
+      "Bash(wget * --method*)",
+      "Bash(scp *)",
+      "Bash(sftp *)",
+      "Bash(ssh *)",
+      "Bash(nc *)",
+      "Bash(ncat *)",
+      "Bash(netcat *)",
+      "Bash(telnet *)"
+    ]
+  }
+}

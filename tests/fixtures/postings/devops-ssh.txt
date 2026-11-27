@@ -1,0 +1,4 @@
+Site Reliability Engineer
+
+You will manage SSH access, rotate keys and keep our .env templates out of git.
+We run Kubernetes on bare metal.

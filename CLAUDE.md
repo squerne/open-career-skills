@@ -18,6 +18,7 @@ Corollary (groundedness): every factual claim in a generated asset must trace to
 - `profile/voice.md`: how the user writes (tone, sentence length, words used and avoided, sign-off), built once by `/voice` from `profile/voice.template.md`. Style only; facts never come from it. Every writing skill reads it.
 - `output/outbox/`: drafts (follow-ups, thank-you notes) from `/outcome`. Nothing in this workspace sends email or messages, even with a mail tool connected: the user sends, then deletes the draft. `output/apply-<company>/sent/` holds what was actually sent.
 - `documents/`: (optional, user-created) source materials like an exported CV.
+- `tools/posting-check.mjs`: the posting check. Every posting is saved under `output/postings/`, checked, and read only as the cleaned copy (see SECURITY.md). It advises; the user decides.
 - `docs/`: WORKFLOW.md (the pipeline), SKILLS.md (per-skill contracts), TROUBLESHOOTING.md. Fork only; a plugin install has no `docs/`.
 
 **Where files go**: every file a skill writes goes in this folder. In a plugin install the skills themselves live in the plugin's install folder (under `~/.claude/plugins/`); never write there, because a plugin update replaces it.

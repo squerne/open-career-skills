@@ -23,5 +23,8 @@ output/outbox/
 # Local user documents (create this folder for CV exports etc.)
 documents/
 
+# Claude Code's own per-machine approvals ("don't ask again" answers)
+.claude/settings.local.json
+
 # OS noise
 .DS_Store

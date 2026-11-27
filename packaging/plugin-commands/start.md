@@ -27,6 +27,7 @@ Copy only these. Never copy a file without `template` in its name from `profile/
 ## Step 2: the workspace rules
 
 - `CLAUDE.md`: if the folder has none, copy `${CLAUDE_PLUGIN_ROOT}/CLAUDE.md` here. It holds the rule every skill follows (never invent a fact about the person) and is read at the start of every session in this folder. If a `CLAUDE.md` already exists, do not change it; ask whether to append the workspace rules to it, and wait for the answer before Step 4.
+- `.claude/settings.json`: if the folder has none, copy `${CLAUDE_PLUGIN_ROOT}/.claude/settings.json` here. It holds the permission rules from `SECURITY.md` (always ask before edits to the workspace's own rules and before `git push`; never send data out with `curl`, `ssh` or `nc`; never read `.env` or `~/.ssh`), and Claude Code reads them from this folder, not from the plugin. If one exists, do not change it; say that the plugin's file lists rules worth merging, and leave it to the person.
 - `.gitignore`: if there is none, copy `${CLAUDE_PLUGIN_ROOT}/.gitignore`. If there is one, append each line of the plugin's file that it lacks. These lines keep the profile, the stories, the tracker and everything in `output/` out of git, in case the person ever versions or shares this folder.
 
 ## Step 3: report

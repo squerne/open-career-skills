@@ -7,5 +7,6 @@ Use the `job-search` skill (.claude/skills/job-search/SKILL.md) exactly as writt
 
 - Inputs: `profile/profile.md` (run `/setup` first if missing), `tracker/applications.md` for dedup, and `.claude/skills/job-search/portals.md` for URL patterns.
 - $ARGUMENTS (if provided) overrides the profile's target role/location focus for this run.
+- Every posting read in full goes through `tools/posting-check.mjs` first (the skill says how); read only the cleaned copy, and carry a `WARNING` verdict into the list.
 - Respect the iron rule: only report postings actually fetched or pasted back by the user; when boards block fetching, hand over constructed search URLs instead.
 - Hand off the list to `/rank` (a batch pre-score) or a single winner to `/apply <url>`.

@@ -34,7 +34,8 @@ function place(f) {
   if ((m = f.match(/^packaging\/plugin-commands\/([^/]+\.md)$/))) return `commands/${m[1]}`;
   if ((m = f.match(/^\.claude\/agents\/([^/]+\.md)$/))) return `agents/${m[1]}`;
   if (/^(profile|tracker|content|story-bank)\/[^/]+\.md$/.test(f)) return f;
-  if (['output/.gitkeep', 'CLAUDE.md', '.gitignore', 'README.md', 'LICENSE'].includes(f)) return f;
+  if (/^tools\/[^/]+\.mjs$/.test(f)) return f; // the posting check and the board scanner, run from the plugin folder
+  if (['output/.gitkeep', 'CLAUDE.md', '.gitignore', 'README.md', 'LICENSE', 'SECURITY.md', '.claude/settings.json'].includes(f)) return f;
   return null;
 }
 
